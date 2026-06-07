@@ -1,0 +1,2826 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лазерная эпиляция на александритовом лазере — Dr.Laser</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Tenor+Sans&display=swap" rel="stylesheet">
+<style>
+:root {
+  --white: #f2ede6;
+  --off:   #1a1a1d;
+  --cream: #222226;
+  --black: #0a0a0c;
+  --gold:  #a8834a;
+  --gold2: #c4a068;
+  --grey:  #111111;
+  --lgrey: rgba(255,255,255,0.1);
+  --border: 1px solid rgba(255,255,255,0.1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#0a0a0c;color:#f2ede6;font-family:'Tenor Sans',sans-serif;font-size:18px;line-height:1.72;overflow-x:hidden}
+.page-wrap{max-width:1440px;margin:0 auto;position:relative}
+.page-wrap::before{
+  content:"";position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.42;
+  background:
+    radial-gradient(ellipse 620px 190px at 9% 14%, transparent 60.6%, rgba(196,160,104,.46) 60.9%, transparent 61.7%),
+    radial-gradient(ellipse 520px 150px at 88% 18%, transparent 57.6%, rgba(168,131,74,.38) 58%, transparent 58.8%),
+    radial-gradient(ellipse 440px 120px at 20% 47%, transparent 61.5%, rgba(196,160,104,.32) 62%, transparent 62.9%),
+    radial-gradient(ellipse 560px 170px at 92% 68%, transparent 59.5%, rgba(196,160,104,.34) 60%, transparent 60.9%),
+    linear-gradient(112deg, transparent 0 47%, rgba(196,160,104,.18) 47.1%, transparent 47.6% 100%);
+  background-size:900px 520px,820px 460px,760px 420px,860px 500px,540px 100%;
+  background-position:0 0,100% 120px,20% 48%,100% 74%,50% 0;
+  mix-blend-mode:screen;
+}
+.page-wrap::after{
+  content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.22;
+  background:
+    radial-gradient(ellipse 420px 120px at 14% 18%, rgba(242,237,230,.18), transparent 72%),
+    radial-gradient(ellipse 520px 140px at 82% 36%, rgba(196,160,104,.12), transparent 74%),
+    radial-gradient(ellipse 480px 130px at 28% 78%, rgba(242,237,230,.12), transparent 76%),
+    linear-gradient(108deg, transparent 10%, rgba(242,237,230,.08) 35%, transparent 58%);
+  filter:blur(18px);
+  transform:translateZ(0);
+}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--gold)}
+
+/* ── FLOATING CTA BAR ── */
+.float-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:500;
+  background:var(--black);
+  display:flex;justify-content:center;gap:0;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+.float-btn{
+  flex:1;max-width:220px;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px 20px;
+  font-family:'Tenor Sans',sans-serif;font-size:11px;font-weight:500;
+  letter-spacing:0.2em;text-transform:uppercase;
+  text-decoration:none;color:var(--white);
+  border-right:1px solid rgba(255,255,255,0.08);
+  transition:background 0.2s;
+}
+.float-btn:last-child{border-right:none}
+.float-btn:hover{background:rgba(255,255,255,0.06)}
+.float-btn.gold{background:var(--gold);color:var(--white)}
+.float-btn.gold:hover{background:var(--gold2)}
+.float-btn svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:64px;
+  background:rgba(10,10,12,0.97);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.nav-inner{
+  max-width:1440px;margin:0 auto;height:100%;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 52px;
+}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;letter-spacing:0.1em;color:#f2ede6}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#111111;text-decoration:none;transition:color 0.2s;font-weight:500}
+.nav-links a:hover{color:var(--gold)}
+.nav-right{display:flex;gap:12px;align-items:center}
+.nav-phone{font-size:13px;font-weight:500;color:#f2ede6;text-decoration:none;transition:color 0.2s}
+.nav-phone:hover{color:var(--gold)}
+.nav-cta{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#0a0a0c;background:#f2ede6;padding:11px 24px;text-decoration:none;border:1px solid var(--black);transition:all 0.2s}
+.nav-cta:hover{background:var(--gold);border-color:var(--gold)}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:56px}
+.hero-l{
+  background:var(--off);padding:72px 52px 60px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  border-right:var(--border);
+}
+.hero-tag{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;font-weight:600}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5.2vw,82px);font-weight:300;line-height:1.02;margin-bottom:12px}
+.hero-title em{font-style:italic;color:var(--gold);display:block}
+.hero-sub{font-size:17px;font-weight:400;color:#f2ede6;max-width:440px;line-height:1.85;margin-bottom:36px}
+.hero-laser-badge{
+  display:inline-flex;align-items:center;gap:16px;
+  background:var(--black);padding:18px 28px;margin-bottom:36px;width:fit-content;
+}
+.badge-nm{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--gold2);line-height:1}
+.badge-txt{font-size:11px;font-weight:400;letter-spacing:0.05em;color:#ffffff;line-height:1.5}
+.badge-txt small{display:block;font-size:10px;color:#ffffff;margin-top:2px;font-weight:300}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.btn-gold{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:#0a0a0c;background:var(--gold);padding:15px 32px;text-decoration:none;border:1px solid var(--gold);transition:all 0.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-align:center}
+.btn-gold:hover{background:transparent;color:var(--gold)}
+.btn-outline{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#f2ede6;background:transparent;border:1px solid rgba(255,255,255,0.3);padding:15px 28px;text-decoration:none;border:1px solid var(--lgrey);transition:border-color 0.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-align:center;cursor:pointer;font-family:"Jost",sans-serif}
+.btn-outline:hover{border-color:var(--black)}
+.hero-disclaimer{font-size:11px;color:#111111;font-style:italic;margin-top:12px}
+
+.hero-r{display:flex;flex-direction:column;background:#0d0d10}
+.hero-photo{flex:1;background:var(--cream);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;min-height:400px;position:relative;overflow:hidden}
+.hero-photo::after{display:none}
+.ph-lbl{font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:#111111}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,0.1)}
+.hstat{padding:22px 24px;border-right:1px solid rgba(255,255,255,0.1);background:#0d0d10}
+.hstat:last-child{border-right:none}
+.hstat-n{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:var(--gold);line-height:1;display:block;margin-bottom:3px}
+.hstat-l{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#111111;font-weight:600}
+.hero-cta-strip{padding:18px 24px;border-top:1px solid rgba(255,255,255,0.1);background:#111114;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.strip-label{font-size:11px;color:#111111;font-weight:400}
+.strip-link{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:500;letter-spacing:0.1em;text-decoration:none;color:#f2ede6;padding:8px 16px;border:1px solid var(--lgrey);transition:all 0.2s;white-space:nowrap}
+.strip-link:hover{border-color:var(--gold);background:var(--gold);color:#0a0a0c}
+.strip-link svg{width:14px;height:14px;fill:currentColor}
+
+/* ── TICKER ── */
+.ticker-wrap{overflow:hidden;border-top:var(--border);border-bottom:1px solid rgba(255,255,255,0.1);padding:13px 0}
+.ticker{display:flex;gap:52px;animation:tick 26s linear infinite;white-space:nowrap}
+.ticker span{font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#111111;flex-shrink:0}
+.ticker em{color:var(--gold);font-style:normal}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── WHY ALEXANDRITE ── */
+#why{display:grid;grid-template-columns:340px 1fr}
+.why-side{padding:72px 48px;border-right:1px solid rgba(255,255,255,0.1);background:#111114;display:flex;flex-direction:column;justify-content:space-between}
+.sec-eyebrow{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:500}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.5vw,52px);font-weight:400;line-height:1.1;color:#000000}
+.sec-title em{font-style:italic}
+.why-crystal{margin-top:40px;padding:28px;border:1px solid var(--lgrey);background:var(--white)}
+.why-crystal-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;margin-bottom:8px}
+.why-crystal-text{font-size:15px;color:#cccccc;line-height:1.85;font-weight:400}
+.why-grid{display:grid;grid-template-columns:1fr 1fr}
+.why-card{padding:44px 40px;border-bottom:1px solid rgba(255,255,255,0.1);border-right:var(--border);transition:background 0.25s}
+.why-card:nth-child(2n){border-right:none}
+.why-card:nth-child(n+5){border-bottom:none}
+.why-card:hover{background:#1a1a1d}
+.why-line{width:32px;height:2px;background:var(--gold);margin-bottom:22px;transition:width 0.3s}
+.why-card:hover .why-line{width:56px}
+.why-card-title{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500;margin-bottom:10px;line-height:1.2;color:var(--black)}
+.why-card-text{font-size:15px;color:#111111;line-height:1.85;font-weight:400}
+
+/* ── COMPARE TABLE ── */
+#compare{padding:80px 52px;background:var(--off);border-top:var(--border)}
+.compare-table{width:100%;border-collapse:collapse;border:1px solid var(--lgrey);margin-top:48px}
+.compare-table th{font-size:9px;letter-spacing:0.3em;text-transform:uppercase;font-weight:400;color:#111111;padding:16px 24px;text-align:left;border-bottom:1px solid var(--lgrey);background:var(--white)}
+.compare-table th:nth-child(2){background:var(--black);color:var(--gold2)}
+.compare-table td{padding:16px 24px;font-size:15px;border-bottom:1px solid var(--lgrey);vertical-align:top;font-weight:400;color:#111111}
+.compare-table td:nth-child(2){background:rgba(14,14,14,0.03);font-weight:400}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table tr:hover td{background:var(--cream)}
+.compare-table tr:hover td:nth-child(2){background:rgba(14,14,14,0.06)}
+.gold-text{color:var(--gold);font-weight:500}
+
+/* ── PRICE ── */
+#price{padding:80px 52px;border-top:1px solid rgba(255,255,255,0.1);background:#0d0d10}
+.price-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;gap:24px;flex-wrap:wrap}
+.price-note{font-size:13px;font-weight:400;color:#111111;max-width:380px;line-height:1.75}
+.price-tabs{display:flex;border:1px solid rgba(255,255,255,0.15);width:fit-content}
+.ptab{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;padding:11px 28px;cursor:pointer;background:var(--white);color:#111111;border-right:1px solid var(--lgrey);transition:all 0.2s}
+.ptab:last-child{border-right:none}
+.ptab.on{background:var(--gold);color:#0a0a0c}
+.ptab:hover:not(.on){background:var(--off);color:var(--black)}
+.ppanel{display:none}
+.ppanel.on{display:block}
+
+/* Accordion price */
+.price-acc-group{border:1px solid rgba(255,255,255,0.1);margin-bottom:0}
+.price-acc-group+.price-acc-group{border-top:none}
+.acc-head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 24px;cursor:pointer;background:var(--off);
+  font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);
+  transition:background 0.2s;user-select:none;font-weight:600;
+}
+.acc-head:hover{background:var(--cream)}
+.acc-icon{font-size:18px;font-family:'Cormorant Garamond',serif;transition:transform 0.3s;opacity:0.5;color:var(--black)}
+.acc-open .acc-icon{transform:rotate(45deg);opacity:1;color:var(--gold)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+.acc-open .acc-body{max-height:600px}
+.price-row{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;border-top:1px solid var(--lgrey);transition:background 0.15s}
+.price-row:hover{background:var(--off)}
+.price-zone{font-size:15px;font-weight:400;color:#1a1a1a}
+.price-val{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--gold);white-space:nowrap}
+.price-cta-row{margin-top:0;padding:32px 24px;display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.08)}
+.price-cta-note{font-size:12px;color:#111111;font-style:italic}
+
+/* ── PROCESS ── */
+#process{border-top:1px solid rgba(255,255,255,0.1);background:#0d0d10}
+.process-head{padding:72px 52px 48px;border-bottom:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr)}
+.pstep{padding:44px 36px;border-right:1px solid rgba(255,255,255,0.1);position:relative}
+.pstep:nth-child(3n){border-right:none}
+.pstep:nth-child(n+4){border-top:1px solid rgba(255,255,255,0.1)}
+.pstep-n{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;line-height:1;margin-bottom:-4px;color:transparent;-webkit-text-stroke:1.5px rgba(168,131,74,0.5);display:block}
+.pstep-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;margin-bottom:10px;line-height:1.2;color:var(--black)}
+.pstep-text{font-size:15px;color:#111111;line-height:1.85;font-weight:400}
+
+/* ── TRUST ── */
+#trust{background:var(--black);border-top:var(--border);padding:80px 52px}
+#trust .sec-eyebrow{color:var(--gold2)}
+#trust .sec-title{color:var(--white);margin-top:12px;margin-bottom:52px}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.06)}
+.trust-card{background:var(--black);padding:44px 36px;transition:background 0.25s}
+.trust-card:hover{background:rgba(255,255,255,0.03)}
+.trust-line{width:28px;height:1px;background:var(--gold);margin-bottom:22px}
+.trust-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;color:var(--white);margin-bottom:12px}
+.trust-text{font-size:15px;color:#ffffff;line-height:1.9}
+.trust-cta{margin-top:52px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.trust-label{font-size:13px;color:var(--gold);font-weight:600}
+.btn-gold-inv{font-size:11px!important;letter-spacing:0.25em;text-transform:uppercase;color:var(--black);background:var(--gold2);padding:15px 36px;text-decoration:none;transition:background 0.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-align:center}
+.btn-gold-inv:hover{background:var(--gold)}
+.btn-ghost{font-size:11px!important;letter-spacing:0.2em;text-transform:uppercase;color:var(--white);background:rgba(255,255,255,0.04);padding:15px 28px;border:1px solid rgba(255,255,255,0.3);text-decoration:none;transition:border-color 0.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-align:center;cursor:pointer;font-family:"Jost",sans-serif}
+.btn-ghost:hover{border-color:#ffffff}
+.btn-ghost svg{width:14px;height:14px;fill:currentColor}
+
+/* ── PREP & AFTERCARE ── */
+#prep{display:grid;grid-template-columns:1fr 1fr;border-top:var(--border);margin-top:28px;position:relative}
+#prep::before{
+  content:"";position:absolute;left:52px;right:52px;top:-28px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(196,160,104,.7),transparent);
+}
+.prep-col{padding:72px 52px;border-right:1px solid rgba(255,255,255,0.1)}
+.prep-col:last-child{border-right:none}
+.prep-col .sec-eyebrow{margin-bottom:14px}
+.prep-col .sec-title{margin-bottom:36px}
+.prep-timeline{}
+.prep-item{padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.1);display:flex;gap:20px}
+.prep-item:last-child{border-bottom:none}
+.prep-when{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);min-width:110px;padding-top:3px;flex-shrink:0;font-weight:700}
+.prep-rules{font-size:15px;color:#f2ede6;line-height:1.85;font-weight:400}
+.prep-rules li{margin-bottom:4px}
+
+/* ── FAQ ── */
+#faq{display:grid;grid-template-columns:320px 1fr;border-top:var(--border)}
+.faq-side{padding:72px 48px;border-right:1px solid rgba(255,255,255,0.1);background:#111114;display:flex;flex-direction:column;justify-content:space-between}
+.faq-side .sec-title{margin-top:14px;margin-bottom:32px}
+.faq-side-text{font-size:15px;color:#111111;line-height:1.85;margin-bottom:32px}
+.faq-list{padding:48px 52px}
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.1)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{width:100%;background:none;border:none;color:#f2ede6;font-family:'Tenor Sans',sans-serif;font-size:15px;font-weight:500;text-align:left;padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color 0.2s}
+.faq-q:hover{color:var(--gold)}
+.faq-icon{font-family:'Cormorant Garamond',serif;font-size:22px;transition:transform 0.3s,color 0.2s;opacity:0.35;flex-shrink:0}
+.faq-item.open .faq-icon{transform:rotate(45deg);color:var(--gold);opacity:1}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+.faq-item.open .faq-a{max-height:220px}
+.faq-a-in{padding-bottom:24px;font-size:15px;font-weight:400;color:#cccccc;line-height:1.9;font-style:italic}
+
+/* ── REVIEWS ── */
+#reviews{padding:80px 52px;border-top:1px solid rgba(255,255,255,0.1);background:#111114}
+.reviews-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.1);margin-top:48px}
+.rev-card{background:#1a1a1d;padding:40px 32px;transition:background 0.2s}
+.rev-card:hover{background:#222226}
+.rev-mark{font-family:'Cormorant Garamond',serif;font-size:56px;color:var(--gold);line-height:0.8;display:block;margin-bottom:16px;opacity:0.35}
+.rev-text{font-size:16px;color:#f2ede6;font-style:italic;line-height:1.9;margin-bottom:20px;font-weight:400}
+.rev-name{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--black);font-weight:500}
+.rev-zone{font-size:12px;color:var(--gold);margin-top:3px;font-weight:600}
+.rev-src{margin-top:28px;display:flex;gap:12px}
+.src-btn{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#111111;text-decoration:none;padding:9px 18px;border:1px solid var(--lgrey);transition:all 0.2s}
+.src-btn:hover{border-color:var(--gold);color:var(--gold);border:1px solid var(--gold)}
+
+/* ── CONTRA ── */
+#contra{padding:60px 52px;border-top:1px solid rgba(255,255,255,0.1);background:#0d0d10}
+.contra-inner{display:grid;grid-template-columns:280px 1fr;gap:60px;align-items:start}
+.contra-left .sec-title{margin-top:14px;margin-bottom:16px}
+.contra-left p{font-size:15px;color:#f2ede6;line-height:1.85;font-weight:400}
+.contra-list{display:flex;flex-wrap:wrap;gap:8px}
+.ctag{font-size:13px;font-weight:400;padding:8px 18px;border:1px solid #b8b2aa;color:#111111}
+
+/* ── FOOTER CTA ── */
+#footer-cta{
+  padding:100px 52px;background:var(--black);border-top:1px solid rgba(255,255,255,0.06);
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+  position:relative;overflow:hidden;
+}
+#footer-cta::before{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(168,131,74,0.09),transparent 70%);top:50%;left:-80px;transform:translateY(-50%);pointer-events:none}
+.fcta-eye{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.fcta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.8vw,56px);font-weight:300;line-height:1.05;color:var(--white);margin-bottom:16px}
+.fcta-title em{font-style:italic;color:var(--gold2)}
+.fcta-text{font-size:16px;font-weight:300;color:#ffffff;line-height:1.9;margin-bottom:8px}
+.fcta-right{display:flex;flex-direction:column;gap:12px}
+.form-input{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.5);color:var(--white);font-family:'Tenor Sans',sans-serif;font-size:14px;font-weight:300;padding:15px 20px;outline:none;transition:border-color 0.2s}
+.form-input::placeholder{color:#ffffff}
+.form-input:focus{border-color:var(--gold)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-submit{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--black);background:var(--gold2);padding:17px;border:none;cursor:pointer;font-family:'Tenor Sans',sans-serif;transition:background 0.2s;font-weight:500}
+.form-submit:hover{background:var(--gold)}
+.form-mess{display:flex;gap:8px}
+.mess-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:14px;text-decoration:none;border:1px solid rgba(255,255,255,0.28);color:var(--white);transition:all 0.2s;background:rgba(255,255,255,0.04)}
+.mess-btn:hover{border-color:var(--gold);color:var(--gold)}
+.mess-btn svg{width:15px;height:15px;fill:currentColor}
+.form-legal{font-size:11px;color:#ffffff;font-weight:300;line-height:1.6}
+.form-legal a{color:#ffffff}
+
+/* ── FOOTER ── */
+footer{padding:28px 52px 80px;border-top:1px solid rgba(255,255,255,0.06);background:var(--black);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;letter-spacing:0.1em;color:var(--white)}
+.f-logo span{color:var(--gold)}
+.f-note{font-size:11px;color:#ffffff;font-weight:400}
+.f-note a{color:#ffffff}
+
+/* ── REVEAL ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.r{animation:fadeUp 0.7s ease both}
+.d1{animation-delay:0.1s}.d2{animation-delay:0.2s}.d3{animation-delay:0.3s}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* ══════════════════════════════════
+   MOBILE FIRST — base = 320–767px
+   ══════════════════════════════════ */
+
+/* Float bar — mobile: 3 btns, tighter */
+@media(max-width:767px){
+  .float-bar{padding:0}
+  .float-btn{padding:14px 8px;font-size:9px;gap:6px;letter-spacing:0.1em;max-width:none}
+  .float-btn svg{width:18px;height:18px}
+  /* hide text labels on tiny phones, show only icons + key btn */
+  .float-btn span.fb-label{display:none}
+}
+
+@media(max-width:767px){
+/* NAV mobile */
+.nav-inner{padding:0 16px}
+nav{height:56px}
+.nav-links{display:none}
+.nav-right{gap:8px}
+.nav-phone{display:none}
+.nav-cta{padding:9px 16px;font-size:9px}
+.nav-logo{font-size:17px}
+
+/* HERO mobile */
+#hero{grid-template-columns:1fr;min-height:auto}
+.hero-l{padding:36px 16px 32px;border-right:none;border-bottom:var(--border)}
+.hero-tag{margin-bottom:16px;font-size:8px}
+.hero-title{font-size:clamp(36px,10vw,52px);margin-bottom:10px}
+.hero-laser-badge{padding:14px 18px;margin-bottom:20px}
+.badge-nm{font-size:32px}
+.badge-txt{font-size:10px}
+.hero-sub{font-size:14px;margin-bottom:24px}
+.hero-btns{gap:8px;margin-bottom:6px}
+.btn-gold{padding:13px 20px;font-size:9px}
+.btn-outline{padding:13px 16px;font-size:9px}
+.hero-r{border-top:none}
+.hero-photo{min-height:240px}
+.hero-stats{grid-template-columns:repeat(3,1fr)}
+.hstat{padding:16px 12px}
+.hstat-n{font-size:26px}
+.hstat-l{font-size:8px}
+.hero-cta-strip{padding:14px 16px;flex-direction:column;align-items:flex-start;gap:10px}
+.strip-link{padding:10px 14px;font-size:10px;width:100%;justify-content:center}
+
+/* TICKER mobile */
+.ticker-wrap{padding:11px 0}
+.ticker span{font-size:9px;letter-spacing:0.18em}
+
+/* WHY mobile */
+#why{grid-template-columns:1fr;display:flex;flex-direction:column}
+.why-side{padding:40px 16px;border-right:none;border-bottom:var(--border)}
+.why-crystal{margin-top:24px;padding:20px}
+.why-grid{grid-template-columns:1fr}
+.why-card{padding:32px 16px;border-right:none!important;border-bottom:var(--border)!important}
+.why-card:last-child{border-bottom:none!important}
+
+/* COMPARE mobile */
+#compare{padding:40px 16px}
+.compare-table{font-size:12px;display:block;overflow-x:auto}
+.compare-table th,.compare-table td{padding:12px 14px;white-space:normal}
+.compare-table th:nth-child(3),.compare-table td:nth-child(3){display:none}/* hide diode col on mobile, show only alexandrite */
+#compare .sec-title{font-size:clamp(24px,7vw,36px)}
+#compare>[style*="display:flex"]{flex-direction:column}
+#compare>[style*="display:flex"] .btn-gold,
+#compare>[style*="display:flex"] .btn-outline{width:100%;text-align:center;display:block}
+
+/* PRICE mobile */
+#price{padding:40px 16px}
+.price-top{flex-direction:column;align-items:flex-start;gap:20px}
+.price-note{font-size:13px}
+.acc-head{padding:15px 16px;font-size:8px}
+.price-row{padding:13px 16px}
+.price-zone{font-size:13px}
+.price-val{font-size:18px}
+.price-cta-row{flex-direction:column;gap:10px}
+.price-cta-row .btn-gold,.price-cta-row .btn-outline{width:100%;text-align:center}
+
+/* PROCESS mobile */
+#process .process-head{padding:40px 16px 28px;flex-direction:column;align-items:flex-start;gap:20px}
+#process .process-head .btn-gold{width:100%;text-align:center}
+.process-steps{grid-template-columns:1fr}
+.pstep{padding:28px 16px;border-right:none;border-bottom:var(--border);border-top:none!important}
+.pstep:last-child{border-bottom:none}
+.pstep-n{font-size:52px}
+.pstep-title{font-size:18px}
+
+/* TRUST mobile */
+#trust{padding:40px 16px}
+.trust-grid{grid-template-columns:1fr}
+.trust-card{padding:32px 20px}
+.trust-cta{flex-direction:column;align-items:flex-start;gap:10px}
+.trust-cta .btn-gold-inv,.trust-cta .btn-ghost{width:100%;justify-content:center;text-align:center}
+
+/* PREP mobile */
+#prep{grid-template-columns:1fr;display:flex;flex-direction:column}
+.prep-col{padding:40px 16px;border-right:none;border-bottom:var(--border)}
+.prep-col:last-child{border-bottom:none}
+.prep-item{flex-direction:column;gap:8px;padding:16px 0}
+.prep-when{min-width:auto;padding-top:0}
+
+/* FAQ mobile */
+#faq{grid-template-columns:1fr;display:flex;flex-direction:column}
+.faq-side{padding:40px 16px;border-right:none;border-bottom:var(--border)}
+.faq-side>div:last-child{flex-direction:row;gap:10px;margin-top:24px}
+.faq-side>div:last-child .btn-gold,.faq-side>div:last-child .btn-outline{flex:1;text-align:center}
+.faq-list{padding:24px 16px}
+.faq-q{font-size:13px;padding:20px 0}
+.faq-a-in{font-size:13px}
+
+/* REVIEWS mobile */
+#reviews{padding:40px 16px}
+.reviews-grid{grid-template-columns:1fr}
+.rev-card{padding:28px 20px}
+.rev-src{flex-direction:column;gap:8px}
+.src-btn{text-align:center;width:100%;display:block}
+
+/* CONTRA mobile */
+#contra{padding:40px 16px}
+.contra-inner{grid-template-columns:1fr;gap:24px}
+
+/* FOOTER CTA mobile */
+#footer-cta{grid-template-columns:1fr;padding:48px 16px;gap:32px}
+.fcta-title{font-size:clamp(28px,8vw,44px)}
+.form-row{grid-template-columns:1fr}
+.form-mess{flex-direction:column;gap:8px}
+.fcta-left>div[style]{flex-direction:column;gap:10px}
+.fcta-left>div[style] .btn-gold-inv,
+.fcta-left>div[style] .btn-ghost{width:100%;justify-content:center}
+
+/* FOOTER mobile */
+footer{padding:20px 16px 80px;flex-direction:column;align-items:flex-start;gap:8px}
+
+/* SEC titles mobile */
+.sec-title{font-size:clamp(24px,7vw,38px)}
+
+}
+
+/* ══════════════════════════════════
+   TABLET — 768px – 1199px
+   ══════════════════════════════════ */
+@media(min-width:768px){
+  .nav-inner{padding:0 32px}
+  nav{height:60px}
+  .nav-phone{display:block}
+  .nav-links{display:none}
+  .nav-cta{padding:10px 22px}
+
+  #hero{grid-template-columns:1fr 1fr;min-height:100vh}
+  .hero-l{padding:56px 36px 48px;border-right:var(--border);border-bottom:none}
+  .hero-title{font-size:clamp(40px,5.5vw,64px)}
+  .hero-btns{gap:10px}
+  .hero-cta-strip{flex-direction:row;padding:16px 24px}
+  .strip-link{width:auto}
+
+  #why{grid-template-columns:1fr;display:grid}
+  .why-side{padding:56px 36px;border-right:none;border-bottom:var(--border)}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .why-card:nth-child(odd){border-right:var(--border)!important}
+  .why-card:nth-child(even){border-right:none!important}
+  .why-card:nth-child(n+3){border-bottom:none!important}
+  .why-card{border-bottom:var(--border)!important;padding:40px 32px}
+
+  #compare{padding:56px 36px}
+  .compare-table th:nth-child(3),.compare-table td:nth-child(3){display:table-cell}
+  #compare>[style*="display:flex"]{flex-direction:row}
+  #compare>[style*="display:flex"] .btn-gold,
+  #compare>[style*="display:flex"] .btn-outline{width:auto;display:inline-block}
+
+  #price{padding:56px 36px}
+  .price-top{flex-direction:row;align-items:flex-end}
+  .price-cta-row{flex-direction:row}
+  .price-cta-row .btn-gold,.price-cta-row .btn-outline{width:auto}
+
+  #process .process-head{padding:56px 36px 40px;flex-direction:row;align-items:flex-end}
+  #process .process-head .btn-gold{width:auto}
+  .process-steps{grid-template-columns:repeat(3,1fr)}
+  .pstep{padding:40px 28px;border-right:var(--border);border-bottom:none}
+  .pstep:nth-child(3n){border-right:none}
+  .pstep:nth-child(n+4){border-top:var(--border)}
+
+  #trust{padding:56px 36px}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-cta{flex-direction:row}
+  .trust-cta .btn-gold-inv,.trust-cta .btn-ghost{width:auto}
+
+  #prep{grid-template-columns:1fr 1fr;display:grid}
+  .prep-col{padding:56px 36px;border-right:var(--border)}
+  .prep-col:last-child{border-right:none}
+  .prep-item{flex-direction:row;gap:20px}
+
+  #faq{grid-template-columns:280px 1fr;display:grid}
+  .faq-side{padding:56px 36px;border-right:var(--border)}
+  .faq-list{padding:40px 36px}
+  .faq-side>div:last-child{flex-direction:column;gap:10px;margin-top:0}
+  .faq-side>div:last-child .btn-gold,.faq-side>div:last-child .btn-outline{flex:none;width:100%}
+
+  #reviews{padding:56px 36px}
+  .reviews-grid{grid-template-columns:1fr 1fr}
+  .rev-src{flex-direction:row}
+  .src-btn{width:auto}
+
+  #contra{padding:56px 36px}
+  .contra-inner{grid-template-columns:240px 1fr;gap:48px}
+
+  #footer-cta{grid-template-columns:1fr 1fr;padding:72px 36px}
+  .form-row{grid-template-columns:1fr 1fr}
+  .form-mess{flex-direction:row}
+  .fcta-left>div[style]{flex-direction:row}
+  .fcta-left>div[style] .btn-gold-inv,
+  .fcta-left>div[style] .btn-ghost{width:auto}
+
+  footer{padding:28px 36px 80px;flex-direction:row;align-items:center}
+}
+
+/* ══════════════════════════════════
+   DESKTOP — 1200px+
+   ══════════════════════════════════ */
+@media(min-width:1200px){
+  .nav-inner{padding:0 52px}
+  nav{height:64px}
+  .nav-links{display:flex}
+  .nav-phone{display:block}
+
+  .hero-l{padding:72px 52px 60px}
+  .hero-title{font-size:clamp(48px,5.2vw,82px)}
+
+  #why{grid-template-columns:340px 1fr}
+  .why-side{padding:72px 48px;border-right:var(--border);border-bottom:none}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .why-card:nth-child(odd){border-right:var(--border)!important}
+  .why-card:nth-child(n+3){border-bottom:none!important}
+  .why-card{border-bottom:var(--border)!important;padding:44px 40px}
+
+  #compare{padding:80px 52px}
+  #price{padding:80px 52px}
+  .process-steps{grid-template-columns:repeat(3,1fr)}
+  .pstep{border-right:var(--border);border-top:none!important;padding:44px 36px}
+  .pstep:nth-child(3n){border-right:none}
+  .pstep:nth-child(n+4){border-top:var(--border)!important}
+  #process .process-head{padding:72px 52px 48px}
+
+  #trust{padding:80px 52px}
+  .trust-grid{grid-template-columns:repeat(3,1fr)}
+
+  #prep{grid-template-columns:1fr 1fr}
+  .prep-col{padding:72px 52px}
+
+  #faq{grid-template-columns:320px 1fr}
+  .faq-side{padding:72px 48px}
+  .faq-list{padding:48px 52px}
+
+  #reviews{padding:80px 52px}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+
+  #contra{padding:60px 52px}
+  .contra-inner{grid-template-columns:280px 1fr;gap:60px}
+
+  #footer-cta{padding:100px 52px;gap:80px}
+
+  footer{padding:28px 52px 80px}
+}
+
+
+/* ── MESSENGER POPUP ── */
+.mess-popup{
+  position:fixed;inset:0;z-index:600;
+  display:flex;align-items:flex-end;justify-content:center;
+  pointer-events:none;opacity:0;transition:opacity 0.25s ease;
+}
+.mess-popup.open{opacity:1;pointer-events:all}
+.mess-popup-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.55);backdrop-filter:blur(4px)}
+.mess-popup-box{
+  position:relative;z-index:1;
+  background:var(--white);
+  width:100%;max-width:480px;
+  padding:32px 24px 24px;
+  border-radius:20px 20px 0 0;
+  transform:translateY(100%);
+  transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  display:flex;flex-direction:column;gap:12px;
+}
+.mess-popup.open .mess-popup-box{transform:translateY(0)}
+.mess-popup-title{
+  font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;
+  color:var(--black);margin-bottom:8px;text-align:center;
+}
+.mess-popup-btn{
+  display:flex;align-items:center;gap:16px;
+  padding:16px 20px;
+  border:1px solid var(--lgrey);
+  text-decoration:none;color:var(--black);
+  font-size:15px;font-weight:500;
+  transition:all 0.2s;border-radius:8px;
+  background:var(--off);
+}
+.mess-popup-btn:hover{border-color:var(--gold);background:rgba(168,131,74,0.15)}
+.mess-popup-btn svg{width:28px;height:28px;fill:#f2ede6;flex-shrink:0}
+.mess-popup-btn.mess-max svg{fill:#241a30}
+.mess-popup-close{
+  margin-top:4px;padding:14px;
+  background:none;border:1px solid var(--lgrey);
+  font-family:'Tenor Sans',sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:#111111;cursor:pointer;border-radius:8px;
+  transition:all 0.2s;
+}
+.mess-popup-close:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ── NEW FLOAT BAR — 2 buttons ── */
+.float-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:500;
+  display:grid;grid-template-columns:1fr 1fr;
+  height:60px;
+  background:none;
+  transition:transform 0.3s ease, opacity 0.3s ease;
+}
+.float-btn{
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  height:60px;width:100%;
+  font-family:'Tenor Sans',sans-serif;font-size:12px;font-weight:600;
+  letter-spacing:0.18em;text-transform:uppercase;
+  text-decoration:none;
+  border:none;margin:0;padding:0 16px;
+  cursor:pointer;
+  transition:filter 0.2s;
+}
+.float-btn:hover{filter:brightness(1.08)}
+.float-btn.call{background:#0e0e0e;color:#ffffff}
+.float-btn.write{background:#a8834a;color:#ffffff}
+.float-btn svg{width:18px;height:18px;fill:#ffffff;flex-shrink:0}
+
+@media(min-width:768px){
+  .float-bar{max-width:480px;left:50%;transform:translateX(-50%);border-radius:0;overflow:visible}
+  .mess-popup-box{border-radius:16px;margin-bottom:80px}
+}
+
+
+/* ── PRICE EXTENDED ── */
+.price-cols-head{
+  display:grid;grid-template-columns:1fr repeat(4,120px);
+  padding:10px 24px;background:var(--black);
+  font-size:9px;letter-spacing:0.25em;text-transform:uppercase;
+  color:#ffffff;gap:8px;
+}
+.price-row-full{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  padding:18px 24px;border-top:1px solid var(--lgrey);
+  gap:24px;transition:background 0.15s;
+}
+.price-row-full:hover{background:#1a1a1d}
+.price-zone{font-size:14px;font-weight:400;color:#222;line-height:1.6;flex:1}
+.price-multi{display:flex;flex-direction:column;align-items:flex-end;gap:3px;flex-shrink:0}
+.price-multi b{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--gold)}
+.price-multi small{font-size:12px;color:#333333;font-weight:400}
+
+.price-club-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 24px;background:var(--black);
+  border-top:1px solid rgba(255,255,255,0.08);
+  flex-wrap:wrap;gap:16px;
+}
+.price-club-label{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#dddddd}
+.price-club-vals{display:flex;gap:48px;justify-content:center}
+.price-club-vals span{display:flex;flex-direction:column;align-items:center;gap:4px}
+.price-club-vals b{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:var(--gold)}
+.price-club-vals small{font-size:10px;color:#ffffff;letter-spacing:0.15em;text-transform:uppercase}
+
+.complex-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--lgrey);border:1px solid var(--lgrey)}
+.complex-card{background:#1a1a1d;padding:36px 32px;transition:background 0.2s;position:relative}
+.complex-card:hover{background:#222226}
+.complex-tag{font-size:9px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.complex-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;margin-bottom:8px}
+.complex-zones{font-size:13px;color:#111111;line-height:1.7;margin-bottom:16px;font-weight:400}
+.complex-price{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--gold);line-height:1}
+.complex-sub-prices{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
+.complex-sub-prices span{font-size:11px;color:#111111;font-weight:300}
+
+@media(max-width:767px){
+  .price-cols-head{display:none}
+  .price-row-full{flex-direction:column;gap:12px;padding:16px}
+  .price-multi{align-items:flex-start;flex-direction:row;flex-wrap:wrap;gap:8px}
+  .price-multi b{font-size:22px}
+  .complex-grid{grid-template-columns:1fr}
+  .price-club-row{flex-direction:column;align-items:flex-start}
+}
+@media(min-width:768px) and (max-width:1199px){
+  .price-cols-head{grid-template-columns:1fr repeat(4,90px);padding:10px 16px}
+  .price-row-full{padding:16px}
+}
+
+
+/* ── CERTIFICATES BLOCK ── */
+#certs{border-top:1px solid rgba(255,255,255,0.1);background:#111114}
+.certs-header{padding:64px 52px 48px;border-bottom:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.certs-header-left{}
+.certs-header-right{font-size:13px;color:#111111;max-width:340px;line-height:1.8;font-weight:400;text-align:right}
+.certs-grid{display:grid;grid-template-columns:1fr 1fr}
+.cert-item{padding:52px 52px;border-right:var(--border);border-bottom:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;gap:20px;transition:background 0.25s}
+.cert-item:nth-child(2n){border-right:none}
+.cert-item:hover{background:#1a1a1d}
+.cert-icon-row{display:flex;align-items:center;gap:16px}
+.cert-shield{width:44px;height:44px;background:#f2ede6;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cert-shield svg{width:22px;height:22px;fill:var(--black)}
+.cert-badge{font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);font-weight:600;background:rgba(168,131,74,0.1);padding:5px 12px;border:1px solid rgba(168,131,74,0.25)}
+.cert-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--black);line-height:1.2}
+.cert-num{font-size:12px;font-weight:500;color:var(--black);letter-spacing:0.05em;font-family:'Tenor Sans',sans-serif}
+.cert-num span{color:var(--gold)}
+.cert-rows{display:flex;flex-direction:column;gap:8px}
+.cert-row-item{display:flex;gap:12px;font-size:14px;color:#cccccc;line-height:1.6}
+.cert-row-item strong{color:#f2ede6;font-weight:500;min-width:130px;flex-shrink:0}
+.cert-status{display:inline-flex;align-items:center;gap:8px;margin-top:8px}
+.cert-status-dot{width:8px;height:8px;border-radius:50%;background:#3a9e5f;flex-shrink:0}
+.cert-status-text{font-size:12px;font-weight:500;color:#4caf50;letter-spacing:0.1em;text-transform:uppercase}
+.cert-note{font-size:11px;color:#111111;font-style:italic;line-height:1.7;border-top:1px solid var(--lgrey);padding-top:16px;margin-top:4px}
+
+@media(max-width:767px){
+  #certs .certs-header{padding:40px 16px 28px;flex-direction:column;align-items:flex-start}
+  .certs-header-right{text-align:left;max-width:none}
+  .certs-grid{grid-template-columns:1fr}
+  .cert-item{padding:32px 16px;border-right:none}
+  .cert-item:nth-child(n){border-right:none}
+}
+@media(min-width:768px) and (max-width:1199px){
+  .certs-header{padding:48px 36px 36px}
+  .cert-item{padding:40px 36px}
+}
+
+
+/* ── PDF MODAL ── */
+.pdf-modal{
+  position:fixed;inset:0;z-index:700;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;
+  transition:opacity 0.25s ease;
+}
+.pdf-modal.open{opacity:1;pointer-events:all}
+.pdf-modal-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.85);backdrop-filter:blur(6px)}
+.pdf-modal-box{
+  position:relative;z-index:1;
+  background:var(--white);
+  width:min(980px,94vw);
+  height:min(86vh,760px);
+  display:flex;flex-direction:column;
+  box-shadow:0 40px 100px rgba(0,0,0,0.5);
+}
+.pdf-modal-head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 24px;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  background:var(--off);
+  flex-shrink:0;
+}
+.pdf-modal-title{font-size:12px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#f2ede6}
+.pdf-modal-title span{color:var(--gold)}
+.pdf-modal-actions{display:flex;gap:8px;align-items:center}
+.pdf-modal-actions{display:flex;gap:8px;align-items:center}
+.pdf-modal-close{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--black);border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s;flex-shrink:0;
+}
+.pdf-modal-close:hover{background:#333}
+.pdf-modal-close svg{width:14px;height:14px;fill:white}
+.pdf-modal-frame{
+  flex:1;width:100%;min-height:0;border:none;display:block;background:#111;
+  object-fit:contain;object-position:center;padding:18px;
+}
+.pdf-modal-fallback{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:16px;padding:40px;text-align:center;
+}
+.pdf-modal-fallback p{font-size:14px;color:#111111;max-width:320px;line-height:1.7}
+
+/* Open PDF button on cert cards */
+.cert-open-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:8px;width:fit-content;
+  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--black);background:transparent;
+  padding:10px 18px;border:1px solid var(--lgrey);
+  cursor:pointer;font-family:'Tenor Sans',sans-serif;font-weight:500;
+  transition:all 0.2s;
+}
+.cert-open-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(168,131,74,0.1)}
+.cert-open-btn svg{width:14px;height:14px;fill:currentColor;flex-shrink:0}
+
+
+/* ── SECTION MAX WIDTH ── */
+#why,#compare,#price,#process,#trust,#certs,#prep,#faq,#reviews,#contra,#footer-cta{
+  /* sections are full-width bg, inner content constrained */
+}
+
+/* For grid-based sections, set max-width on section directly */
+@media(min-width:1440px){
+  #hero{max-width:1440px;margin:0 auto}
+  #why{max-width:1440px;margin:0 auto}
+  .why-grid{/* inherits from #why */}
+  #process .process-steps{max-width:1440px;margin:0 auto}
+  #compare{max-width:1440px;margin:0 auto}
+  #price{max-width:1440px;margin:0 auto}
+  #trust{max-width:1440px;margin:0 auto}
+  #certs{max-width:1440px;margin:0 auto}
+  #prep{max-width:1440px;margin:0 auto}
+  #faq{max-width:1440px;margin:0 auto}
+  #reviews{max-width:1440px;margin:0 auto}
+  #contra{max-width:1440px;margin:0 auto}
+  #footer-cta{max-width:1440px;margin:0 auto}
+  footer{max-width:1440px;margin:0 auto}
+  #disclaimer{max-width:1440px;margin:0 auto}
+  .disclaimer-bar{max-width:1440px;margin:0 auto}
+}
+
+
+
+/* ══════════════════════════
+   DEVICE BLOCKS
+   ══════════════════════════ */
+#alex-device{border-top:var(--border);background:var(--off)}
+#diod-device{border-top:var(--border);background:#111113}
+.dev-wrap{display:grid;grid-template-columns:1fr 1fr}
+.dev-left{padding:80px 52px;display:flex;flex-direction:column;gap:0}
+.dev-right{padding:80px 52px;display:flex;flex-direction:column;gap:28px}
+
+/* ── ALEX (premium light) ── */
+.dev-premium .dev-left{border-right:var(--border)}
+.dev-eyebrow{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:600}
+.dev-label-top{display:inline-block;font-size:9px;letter-spacing:0.35em;text-transform:uppercase;background:var(--gold);color:white;padding:5px 14px;margin-bottom:20px;font-weight:600}
+.dev-name{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,6vw,88px);font-weight:300;line-height:0.95;color:var(--black);margin-bottom:0}
+.dev-name em{font-style:italic;color:var(--gold);display:block}
+.dev-wave{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--gold);letter-spacing:0.1em;margin:16px 0 28px;border-left:3px solid var(--gold);padding-left:16px}
+.dev-desc{font-size:16px;font-weight:400;color:#111111;line-height:1.85;margin-bottom:16px}
+.dev-specs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--lgrey);border:1px solid var(--lgrey);margin:28px 0 24px}
+.dsp{background:var(--white);padding:22px 20px}
+.dsp-n{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--gold);line-height:1;display:block;margin-bottom:5px}
+.dsp-l{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#333333;font-weight:500}
+.dev-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.dev-tag{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;padding:8px 16px}
+.dev-tag-gold{border:1.5px solid var(--gold);color:var(--gold);background:rgba(168,131,74,0.06)}
+.dev-tag-grey{border:1px solid rgba(255,255,255,0.2);color:#ffffff;background:rgba(255,255,255,0.03)}
+
+/* photo */
+.dev-photo-wrap{position:relative}
+.dev-badge-float{
+  position:absolute;top:20px;left:20px;z-index:2;
+  background:var(--gold);color:white;
+  font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;
+  padding:8px 16px;
+}
+.dev-photo{
+  width:100%;aspect-ratio:4/5;
+  background:var(--cream);border:1px solid var(--lgrey);
+  display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;
+}
+.dev-photo-lbl{font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:#111111}
+.dev-why{background:var(--white);border:1px solid var(--lgrey);padding:28px}
+.dev-why-title{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:16px}
+.dev-why-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.dev-why-list li{font-size:15px;color:#111111;line-height:1.55;padding-left:16px;position:relative}
+.dev-why-list li::before{content:'✦';position:absolute;left:0;color:var(--gold);font-size:8px;top:4px}
+
+/* ── DIOD (secondary dark) ── */
+.dev-secondary{background:#111113}
+.dev-secondary .dev-left{border-right:1px solid rgba(255,255,255,0.07)}
+.dev-name-diod{color:#ffffff;font-size:clamp(44px,5vw,72px)}
+.dev-name-diod em{color:#ffffff}
+.dev-wave-diod{color:#ffffff;border-left-color:#ffffff}
+.dev-desc-diod{color:#ffffff}
+.dev-specs-diod{background:rgba(255,255,255,0.05)!important;border-color:#ffffff!important}
+.dev-specs-diod .dsp{background:#1a1a1d}
+.dev-right-diod{}
+.dev-photo-diod{background:rgba(255,255,255,0.04)!important;border:1px solid rgba(255,255,255,0.07)!important;aspect-ratio:4/5}
+.dev-note{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);padding:24px;display:flex;gap:16px;align-items:flex-start}
+.dev-note-icon{font-size:18px;color:#cccccc;flex-shrink:0;margin-top:2px}
+.dev-note-text{font-size:15px;color:#ffffff;line-height:1.8;font-style:italic}
+
+@media(max-width:767px){
+  .dev-wrap{grid-template-columns:1fr}
+  .dev-left{padding:40px 16px;border-right:none!important;border-bottom:1px solid rgba(255,255,255,0.07)}
+  #alex-device .dev-left{border-bottom:var(--border)}
+  .dev-right{padding:36px 16px}
+  .dev-photo{aspect-ratio:4/3}
+  .dev-photo-diod{aspect-ratio:4/3!important}
+  .dev-name{font-size:clamp(44px,12vw,68px)}
+  .dev-name-diod{font-size:clamp(40px,11vw,60px)!important}
+}
+@media(min-width:768px) and (max-width:1199px){
+  .dev-left,.dev-right{padding:56px 36px}
+  .dev-name{font-size:clamp(48px,7vw,72px)}
+}
+@media(min-width:1440px){
+  #alex-device,#diod-device{max-width:1440px;margin:0 auto}
+}
+
+#device{border-top:var(--border);background:var(--black)}
+.device-inner{display:grid;grid-template-columns:1fr 1fr}
+.device-left{padding:80px 52px;border-right:1px solid rgba(255,255,255,0.08)}
+.device-right{padding:80px 52px;display:flex;flex-direction:column;justify-content:space-between}
+.device-eyebrow{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold2);margin-bottom:16px;font-weight:500}
+.device-name{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,60px);font-weight:300;color:var(--white);line-height:1.05;margin-bottom:28px}
+.device-name em{font-style:italic;color:var(--gold2)}
+.device-desc{font-size:16px;font-weight:300;color:#ffffff;line-height:1.9;margin-bottom:16px}
+.device-desc+.device-desc{margin-bottom:0}
+.device-specs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.06);margin-top:40px}
+.dspec{background:var(--black);padding:28px 28px}
+.dspec-n{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--gold2);line-height:1;display:block;margin-bottom:6px}
+.dspec-l{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#ffffff;font-weight:500}
+.device-photo{flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;min-height:300px;margin-bottom:32px}
+.device-photo-label{font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:#dddddd}
+.device-tags{display:flex;flex-wrap:wrap;gap:8px}
+.device-tag{font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;padding:8px 16px;border:1px solid rgba(201,168,76,0.3);color:var(--gold2)}
+
+@media(max-width:767px){
+  .device-inner{grid-template-columns:1fr}
+  .device-left{padding:40px 16px;border-right:none;border-bottom:1px solid rgba(255,255,255,0.08)}
+  .device-right{padding:40px 16px}
+  .device-specs{grid-template-columns:1fr 1fr}
+}
+@media(min-width:768px) and (max-width:1199px){
+  .device-left,.device-right{padding:56px 36px}
+}
+@media(min-width:1440px){
+  #device{max-width:1440px;margin:0 auto}
+}
+
+
+/* ── BUTTON ICONS ── */
+.btn-gold svg,.btn-outline svg,.btn-gold-inv svg,.btn-ghost svg{
+  width:15px;height:15px;fill:currentColor;flex-shrink:0;vertical-align:middle;margin-right:6px;margin-top:-2px;display:inline;
+}
+.btn-gold,.btn-outline,.btn-gold-inv{display:inline-flex;align-items:center;gap:8px}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px}
+
+
+
+
+/* ── VS BLOCK ── */
+#vs-block{border-top:var(--border);background:var(--black)}
+.vs-header{padding:72px 52px 40px;border-bottom:1px solid rgba(255,255,255,0.12)}
+.vs-header .sec-eyebrow{color:var(--gold2)}
+.vs-header .sec-title{color:var(--white)}
+.vs-intro-text{font-size:16px;color:#ffffff;max-width:520px;margin-top:14px;font-weight:400;line-height:1.8}
+
+/* DESKTOP TABLE */
+.vs-desktop{padding:0 52px 40px;display:block}
+.vs-mobile{display:none}
+.vs-table{width:100%;border-collapse:collapse}
+.vs-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;border-bottom:1px solid rgba(255,255,255,0.07)}
+.vs-row:last-child{border-bottom:none}
+.vs-head{border-bottom:1px solid rgba(255,255,255,0.15)!important;background:rgba(255,255,255,0.03)}
+.vs-footer{background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.1)!important}
+.vs-param{padding:18px 24px;font-size:14px;font-weight:500;color:#ffffff;line-height:1.5;border-right:1px solid rgba(255,255,255,0.08);display:flex;align-items:center}
+.vs-alex-col,.vs-diod-col{padding:20px 24px}
+.vs-alex-col{border-right:1px solid rgba(255,255,255,0.08);background:rgba(168,131,74,0.06)}
+.vs-col-badge{font-size:8px;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px}
+.vs-col-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:var(--white);line-height:1.1}
+.vs-col-sub{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-top:4px;font-weight:600}
+.vs-alex-val{padding:18px 24px;font-size:15px;font-weight:400;color:#ffffff;line-height:1.4;border-right:1px solid rgba(255,255,255,0.08);background:rgba(168,131,74,0.04);display:flex;align-items:center;gap:6px}
+.vs-diod-val{padding:18px 24px;font-size:15px;font-weight:400;color:#ffffff;line-height:1.4;display:flex;align-items:center;gap:6px}
+.vs-win{color:var(--gold2)!important;font-weight:600!important}
+.vs-no{color:#aaaaaa!important;font-style:italic;text-decoration:line-through;text-decoration-color:#aaaaaa}
+.vs-star{color:var(--gold);font-size:10px;flex-shrink:0}
+
+/* MOBILE VS */
+.vs-mobile{padding:0 16px;display:none;flex-direction:column;gap:0}
+.vs-mobile-head{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.1);margin-bottom:2px}
+.vs-mobile-col{padding:16px;display:flex;flex-direction:column;gap:4px}
+.vs-mobile-alex{background:rgba(168,131,74,0.15)}
+.vs-mobile-diod{background:rgba(255,255,255,0.04)}
+.vs-mobile-row{border-bottom:1px solid rgba(255,255,255,0.07)}
+.vs-mobile-label{font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);padding:14px 0 8px}
+.vs-mobile-vals{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-bottom:14px}
+.vs-mobile-val{font-size:14px;font-weight:500;color:#ffffff;line-height:1.4;padding:12px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08)}
+.vs-mobile-val.win{color:var(--gold2);background:rgba(168,131,74,0.1);border-color:#cccccc;font-weight:600}
+.vs-mobile-val.no{color:#aaaaaa;font-style:italic;text-decoration:line-through;text-decoration-color:#ffffff}
+
+/* CTA ROW */
+.vs-cta-row{padding:32px 52px 52px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.08)}
+.vs-cta-note{font-size:14px;color:#ffffff;font-style:italic}
+
+@media(max-width:767px){
+  .vs-header{padding:40px 16px 28px}
+  .vs-desktop{display:none}
+  .vs-mobile{display:flex}
+  .vs-cta-row{padding:24px 16px 40px;flex-direction:column;align-items:stretch}
+  .vs-cta-row .btn-gold-inv,.vs-cta-row .btn-ghost{text-align:center;justify-content:center;width:100%;display:flex;align-items:center}
+  .vs-cta-note{text-align:center;font-size:13px}
+}
+@media(min-width:768px) and (max-width:1199px){
+  .vs-header{padding:56px 36px 32px}
+  .vs-desktop{padding:0 36px 36px}
+  .vs-cta-row{padding:28px 36px 40px}
+}
+@media(min-width:1440px){
+  #vs-block{max-width:1440px;margin:0 auto}
+}
+
+/* ── COMPARE TABLE WRAP ── */
+.compare-table-wrap{padding:0 52px 40px;overflow-x:auto;display:block}
+.compare-table{width:100%;min-width:600px;border-collapse:collapse;border:1px solid var(--lgrey)}
+.compare-table th{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;color:#ffffff;padding:18px 24px;text-align:left;border-bottom:1px solid var(--lgrey);background:var(--black);line-height:1.4}
+.compare-table th.col-alex{background:var(--gold)}
+.compare-table th.col-diod{background:#111111}
+.compare-table td{padding:17px 24px;font-size:15px;border-bottom:1px solid var(--lgrey);vertical-align:top;font-weight:400;color:#1a1a1a;line-height:1.6}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table tr:hover td{background:var(--off)}
+
+/* ── COMPARE MOBILE CARDS ── */
+.compare-cards{display:none;flex-direction:column;gap:0;padding:0 16px 32px}
+.compare-card{padding:28px 24px;border:1px solid var(--lgrey);margin-bottom:8px}
+.compare-card-alex{border-top:3px solid var(--gold);background:var(--off)}
+.compare-card-diod{border-top:3px solid var(--black);background:var(--white)}
+.compare-card-both{border-top:3px solid var(--lgrey);background:var(--white);color:var(--black)}
+.compare-card-head{margin-bottom:16px}
+.compare-card-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--black);line-height:1.1}
+.compare-card-sub{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-top:4px;font-weight:600}
+.compare-card-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.compare-card-list li{font-size:15px;color:#111111;font-weight:400;line-height:1.5}
+
+@media(max-width:767px){
+  .compare-table-wrap{display:none}
+  .compare-cards{display:flex}
+  #compare>[style*="padding:80px"]{padding:40px 16px 28px!important}
+  #compare>[style*="padding:0 52px"]{padding:0 16px 32px!important}
+}
+@media(min-width:768px){
+  .compare-cards{display:none!important}
+}
+
+/* ── BIGGER FONTS GLOBAL ── */
+/* Nav */
+.nav-links a{font-size:11px!important;letter-spacing:0.18em;color:#f2ede6!important;font-weight:500}
+/* Section eyebrow */
+.sec-eyebrow{font-size:10px!important;letter-spacing:0.4em;font-weight:700}
+/* Hero */
+.hero-tag{font-size:10px!important;letter-spacing:0.4em}
+.hero-eyebrow{font-size:10px!important}
+.badge-txt{font-size:12px!important}
+.badge-txt small{font-size:11px!important}
+/* Why cards */
+.why-card-title{font-size:23px!important}
+.why-card-text{font-size:16px!important}
+/* Crystal */
+.why-crystal-name{font-size:21px!important}
+.why-crystal-text{font-size:15px!important}
+/* Compare */
+.compare-table td{font-size:15px!important}
+/* Process */
+.pstep-title{font-size:22px!important}
+.pstep-text{font-size:15px!important}
+/* Trust */
+.trust-title{font-size:23px!important}
+.trust-text{font-size:15px!important}
+/* Cert */
+.cert-title{font-size:23px!important}
+.cert-row-item{font-size:14px!important}
+/* Prep */
+.prep-when{font-size:10px!important}
+.prep-rules{font-size:15px!important}
+/* FAQ */
+.faq-q{font-size:16px!important}
+.faq-a-in{font-size:15px!important}
+/* Reviews */
+.rev-text{font-size:16px!important}
+.rev-name{font-size:12px!important}
+/* Contra */
+.ctag{font-size:14px!important;padding:9px 20px!important}
+/* Footer CTA */
+.fcta-text{font-size:17px!important}
+/* Price */
+.price-zone{font-size:16px!important}
+.price-val{font-size:24px!important}
+.price-multi b{font-size:26px!important}
+.price-multi small{font-size:13px!important}
+.acc-head{font-size:10px!important;padding:20px 24px!important}
+/* Complex */
+.complex-name{font-size:23px!important}
+.complex-zones{font-size:15px!important}
+.complex-price{font-size:38px!important}
+.complex-sub-prices span{font-size:13px!important}
+/* Device block */
+.device-desc{font-size:17px!important}
+.dspec-l{font-size:12px!important}
+/* Hero stats */
+.hstat-n{font-size:40px!important}
+.hstat-l{font-size:11px!important}
+/* Disclaimer */
+.disclaimer-bar p{font-size:13px!important}
+/* Rev source */
+.src-btn{font-size:11px!important;padding:11px 22px!important}
+/* Strip */
+.strip-label{font-size:13px!important}
+.strip-link{font-size:12px!important}
+/* Buttons */
+.btn-gold,.btn-outline,.btn-gold-inv{font-size:11px!important;padding:16px 34px!important}
+.nav-cta{font-size:11px!important}
+
+
+/* ── DIOD SPEC HIGHLIGHTS ── */
+.dsp-best-diod{
+  background:rgba(255,255,255,0.07)!important;
+  border:1px solid rgba(255,255,255,0.18)!important;
+  position:relative;
+}
+.dsp-best-diod .dsp-n{color:#ffffff!important}
+.dsp-best-diod .dsp-l{color:#ffffff!important}
+.dsp-badge-diod{
+  position:absolute;top:8px;right:8px;
+  font-size:8px;letter-spacing:0.2em;text-transform:uppercase;
+  color:#dddddd;font-weight:700;
+}
+
+
+.vs-cta-row{
+  padding:32px 52px 52px;
+  display:flex;gap:16px;align-items:center;flex-wrap:wrap;
+  border-top:1px solid rgba(255,255,255,0.08);
+  margin-top:8px;
+}
+.vs-cta-note{font-size:14px;color:#dddddd;font-style:italic}
+@media(max-width:767px){
+  .vs-cta-row{padding:24px 16px 40px;flex-direction:column;align-items:stretch}
+  .vs-cta-row .btn-gold-inv,.vs-cta-row .btn-ghost{text-align:center;justify-content:center;width:100%}
+  .vs-cta-note{text-align:center;font-size:13px}
+}
+
+
+/* ── HERO BUTTONS ROW ── */
+.hero-photo-mobile{display:none;margin:20px 0;overflow:hidden;background:#0d0d10}
+.hero-btns-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.hero-btn-call,.hero-btn-write{text-align:center;justify-content:center;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:18px 16px;
+  font-family:'Tenor Sans',sans-serif;font-size:11px;font-weight:600;
+  letter-spacing:0.22em;text-transform:uppercase;
+  border:none;cursor:pointer;text-decoration:none;
+  transition:filter 0.2s;
+}
+.hero-btn-call{background:var(--black);color:var(--white)}
+.hero-btn-write{background:var(--gold);color:var(--white)}
+.hero-btn-call:hover,.hero-btn-write:hover{filter:brightness(1.1)}
+.hero-btn-call svg,.hero-btn-write svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
+
+@media(max-width:767px){
+  .hero-photo-mobile{display:block}
+  .hero-r{display:none}
+  .hero-cta-strip{display:none}
+  .hero-btns-row{grid-template-columns:1fr 1fr}
+  .hero-btn-call,.hero-btn-write{text-align:center;justify-content:center;padding:16px 12px;font-size:10px}
+}
+
+
+/* ── GLOBAL BUTTON ALIGNMENT FIX ── */
+.btn-gold,.btn-outline,.btn-gold-inv,.btn-ghost,
+.hero-btn-call,.hero-btn-write{
+  text-align:center !important;
+  justify-content:center !important;
+  align-items:center !important;
+}
+
+
+/* ── GALLERY SLIDER ── */
+#gallery{
+  border-top:var(--border);
+  background:var(--black);
+  overflow:hidden;
+  max-width:1440px;
+  margin:0 auto;
+}
+.gallery-header{
+  padding:52px 52px 36px;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.gallery-header .sec-eyebrow{color:var(--gold2)}
+.gallery-header .sec-title{color:#ffffff;margin-top:12px}
+
+/* Slider */
+.slider-wrap{position:relative;overflow:hidden;width:100%}
+.slider-track{
+  display:flex;
+  transition:transform 0.65s cubic-bezier(0.4,0,0.2,1);
+  will-change:transform;
+  align-items:flex-start;
+}
+
+/* ONE photo per slide, full width, natural height */
+.slide{
+  flex:0 0 100%;
+  min-width:100%;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  background:var(--black);
+}
+.slide img{
+  width:100%;
+  height:auto;
+  max-height:90vh;
+  object-fit:contain;
+  object-position:center top;
+  display:block;
+}
+
+/* Nav */
+.slider-nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 52px;
+  border-top:1px solid rgba(255,255,255,0.07);
+}
+.slider-dots{display:flex;gap:8px;flex-wrap:wrap}
+.slider-dot{
+  width:24px;height:3px;
+  background:rgba(255,255,255,0.2);
+  cursor:pointer;
+  transition:all 0.3s;
+  border:none;
+}
+.slider-dot.active{background:var(--gold);width:40px}
+.slider-arrows{display:flex;gap:10px}
+.slider-arrow{
+  width:44px;height:44px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+  color:var(--white);
+  font-size:20px;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all 0.2s;
+  font-family:sans-serif;
+}
+.slider-arrow:hover{background:var(--gold);border-color:var(--gold)}
+
+/* TABLET */
+@media(min-width:768px) and (max-width:1199px){
+  .gallery-header{padding:40px 36px 28px}
+  .slider-nav{padding:16px 36px}
+  .slide img{max-height:85vh}
+}
+
+/* MOBILE */
+@media(max-width:767px){
+  .gallery-header{padding:32px 16px 20px}
+  .slider-nav{padding:14px 16px}
+  .slide img{max-height:80vh}
+}
+
+
+/* ── DEVICES COMBINED ── */
+#devices{border-top:1px solid rgba(255,255,255,0.1);background:#0d0d10;max-width:1440px;margin:0 auto}
+.devices-header{padding:64px 52px 48px;border-bottom:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.devices-header-right{font-size:14px;color:#111111;max-width:400px;line-height:1.8;font-weight:400}
+.devices-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+
+/* ALEX COLUMN */
+.device-col-alex{border-right:1px solid rgba(255,255,255,0.1);display:grid;grid-template-rows:auto auto 1fr auto auto}
+.device-col-header-alex{
+  padding:40px 48px 32px;
+  background:var(--white);
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+.device-col-badge{
+  display:inline-block;font-size:8px;letter-spacing:0.35em;
+  text-transform:uppercase;background:var(--gold);color:white;
+  padding:5px 12px;margin-bottom:16px;font-weight:700;
+}
+.device-col-name{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.5vw,52px);font-weight:300;line-height:1;color:#f2ede6}
+.device-col-name em{font-style:italic;color:var(--gold);display:block}
+.device-col-wave{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--gold);margin-top:12px;border-left:3px solid var(--gold);padding-left:12px;display:inline-block}
+.device-col-photo{flex:1;overflow:hidden;min-height:280px;background:var(--cream);display:flex;align-items:center;justify-content:center}
+.device-col-photo img{width:100%;height:100%;object-fit:contain;padding:24px;display:block}
+.device-col-specs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.08);border-top:1px solid rgba(255,255,255,0.1);grid-template-rows:1fr 1fr}
+.device-col-spec{background:#1a1a1d;padding:20px 24px;position:relative;min-height:100px}
+.device-col-spec.highlight{background:rgba(168,131,74,0.2);border:1px solid rgba(168,131,74,0.6)}
+.device-col-spec-badge{position:absolute;top:6px;right:8px;font-size:7px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.device-col-spec-n{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--gold);display:block;line-height:1;margin-bottom:4px}
+.device-col-spec-l{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#111111;font-weight:500}
+.device-col-desc{padding:28px 48px;border-top:1px solid rgba(255,255,255,0.1);background:#111114}
+.device-col-desc p{font-size:15px;color:#f2ede6;line-height:1.8;font-weight:400}
+.device-col-tags{padding:20px 48px 32px;background:#111114;display:flex;flex-wrap:wrap;gap:8px}
+.device-tag-gold{font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;padding:7px 14px;border:1.5px solid var(--gold);color:var(--gold);background:rgba(168,131,74,0.08)}
+.device-tag-grey{font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;padding:7px 14px;border:1px solid rgba(255,255,255,0.25);color:#ffffff}
+
+/* DIOD COLUMN */
+.device-col-diod{display:grid;grid-template-rows:auto auto 1fr auto auto;background:#111113}
+.device-col-header-diod{
+  padding:40px 48px 32px;
+  background:#111113;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+.device-col-name-diod{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3vw,46px);font-weight:300;line-height:1;color:#ffffff}
+.device-col-name-diod em{font-style:italic;color:#bbbbbb;display:block}
+.device-col-wave-diod{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#bbbbbb;margin-top:12px;border-left:3px solid rgba(255,255,255,0.15);padding-left:12px;display:inline-block}
+.device-col-photo-diod{flex:1;overflow:hidden;min-height:280px;background:#1a1a1d;display:flex;align-items:center;justify-content:center}
+.device-col-photo-diod img{width:100%;height:100%;object-fit:contain;padding:24px;display:block;filter:brightness(1.05)}
+.device-col-specs-diod{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.06);border-top:1px solid rgba(255,255,255,0.07);grid-template-rows:1fr 1fr}
+.device-col-spec-diod{background:#111113;padding:20px 24px;position:relative;min-height:100px}
+.device-col-spec-diod.highlight{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3)}
+.device-col-spec-diod .device-col-spec-badge{color:#ffffff}
+.device-col-spec-diod .device-col-spec-n{color:#ffffff}
+.device-col-spec-diod .device-col-spec-l{color:#cccccc}
+.device-col-desc-diod{padding:28px 48px;border-top:1px solid rgba(255,255,255,0.07);background:#111113}
+.device-col-desc-diod p{font-size:15px;color:#ffffff;line-height:1.8;font-weight:300}
+.device-col-tags-diod{padding:20px 48px 32px;background:#111113;display:flex;flex-wrap:wrap;gap:8px}
+
+/* MOBILE */
+@media(max-width:767px){
+  .devices-header{padding:36px 16px 28px;flex-direction:column;align-items:flex-start}
+  .devices-grid{grid-template-columns:1fr}
+  .device-col-header-alex,.device-col-header-diod{padding:28px 16px 20px}
+  .device-col-desc,.device-col-tags{padding-left:16px;padding-right:16px}
+  .device-col-desc-diod,.device-col-tags-diod{padding-left:16px;padding-right:16px}
+  .device-col-photo,.device-col-photo-diod{min-height:220px}
+}
+@media(min-width:768px) and (max-width:1199px){
+  .devices-header{padding:48px 36px 32px}
+  .device-col-header-alex,.device-col-header-diod{padding:32px 36px 24px}
+  .device-col-desc,.device-col-tags{padding-left:36px;padding-right:36px}
+  .device-col-desc-diod,.device-col-tags-diod{padding-left:36px;padding-right:36px}
+}
+
+
+.device-col-badge-diod{
+  display:inline-block;font-size:8px;letter-spacing:0.35em;
+  text-transform:uppercase;background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.3);
+  color:#ffffff;
+  padding:5px 12px;margin-bottom:16px;font-weight:600;
+}
+
+
+/* ── PRICE BOTTOM BLOCK ── */
+.price-bottom-block{
+  border-top:1px solid rgba(255,255,255,0.1);
+  padding:52px 24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:28px;
+  text-align:center;
+  background:#0a0a0c;
+}
+.price-bottom-label{
+  font-size:10px;
+  letter-spacing:0.4em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:600;
+  font-family:'Tenor Sans',sans-serif;
+}
+.price-bottom-vals{
+  display:flex;
+  align-items:center;
+  gap:48px;
+}
+.price-bottom-val{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+}
+.price-bottom-price{
+  font-family:'Cormorant Garamond',serif;
+  font-size:52px;
+  font-weight:300;
+  color:var(--gold);
+  line-height:1;
+}
+.price-bottom-period{
+  font-size:10px;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color:#cccccc;
+  font-family:'Tenor Sans',sans-serif;
+}
+.price-bottom-sep{
+  width:1px;
+  height:60px;
+  background:rgba(255,255,255,0.15);
+}
+.price-bottom-btns{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.price-bottom-note{
+  font-size:14px;
+  color:#cccccc;
+  font-style:italic;
+  font-family:'Tenor Sans',sans-serif;
+}
+@media(max-width:767px){
+  .price-bottom-block{padding:40px 16px;gap:24px}
+  .price-bottom-price{font-size:40px}
+  .price-bottom-vals{gap:24px}
+  .price-bottom-btns .btn-gold,
+  .price-bottom-btns .btn-outline{width:100%;justify-content:center}
+}
+
+/* ── DISCLAIMER ── */
+.disclaimer-bar{
+  background:#f0ebe2;border-top:1px solid #d8d2c8;border-bottom:1px solid #d8d2c8;
+  padding:14px 52px;display:flex;align-items:flex-start;gap:14px;
+  /* moves with page-wrap */
+}
+.disclaimer-bar svg{width:18px;height:18px;flex-shrink:0;margin-top:1px;fill:#f2ede6;opacity:0.8}
+.disclaimer-bar p{font-size:12px;color:#f2ede6;line-height:1.7;font-weight:400}
+.disclaimer-bar strong{font-weight:700;color:#ffffff}
+.disclaimer-bar a{color:#a8834a;text-decoration:none;border-bottom:1px solid rgba(168,131,74,0.3)}
+
+/* ── LICENSE BADGE ── */
+.license-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--white);border:1px solid var(--lgrey);
+  padding:12px 20px;margin-top:32px;
+}
+.license-icon{width:20px;height:20px;fill:var(--gold);flex-shrink:0}
+.license-text{font-size:11px;color:#111111;line-height:1.5}
+.license-text strong{font-size:12px;color:#f2ede6;display:block;font-weight:500}
+
+/* ── MEDICAL DISCLAIMER SECTION ── */
+#disclaimer{
+  padding:40px 52px;background:#faf7f1;
+  border-top:2px solid #c8b89a;
+  display:flex;gap:20px;align-items:flex-start;
+}
+.disclaimer-icon-wrap{
+  width:40px;height:40px;border-radius:50%;
+  background:#c8b89a;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:2px;
+}
+.disclaimer-icon-wrap svg{width:20px;height:20px;fill:white}
+.disclaimer-content{flex:1}
+.disclaimer-title{font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold2);margin-bottom:8px;font-family:'Tenor Sans',sans-serif;font-weight:500}
+.disclaimer-text{font-size:12px;color:#111111;line-height:1.8;font-weight:300;max-width:none}
+.disclaimer-text strong{color:#333333;font-weight:500}
+
+@media(max-width:767px){
+  .disclaimer-bar{padding:12px 16px}
+  #disclaimer{padding:24px 16px;gap:14px}
+  .disclaimer-icon-wrap{width:32px;height:32px;flex-shrink:0}
+  .disclaimer-icon-wrap svg{width:16px;height:16px}
+  .license-badge{margin-top:20px}
+}
+@media(min-width:768px) and (max-width:1199px){
+  .disclaimer-bar{padding:12px 32px}
+  #disclaimer{padding:28px 36px}
+}
+
+/* ══════════════════════════════════
+   DARK THEME OVERRIDE
+   ══════════════════════════════════ */
+:root {
+  --white:  #f2ede6;
+  --off:    #141416;
+  --cream:  #1c1c1f;
+  --black:  #0a0a0c;
+  --lgrey:  rgba(255,255,255,0.1);
+  --border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Base */
+html, body { background:#0a0a0c !important; color:#f2ede6 !important; }
+.page-wrap { background:#0a0a0c; }
+
+/* Nav */
+nav { background:rgba(10,10,12,0.97) !important; border-bottom:1px solid rgba(255,255,255,0.1) !important; }
+.nav-logo { color:#f2ede6 !important; }
+.nav-links a { color:#f2ede6 !important; }
+.nav-phone { color:#f2ede6 !important; }
+.nav-cta { background:#f2ede6 !important; color:#0a0a0c !important; }
+.nav-cta:hover { background:var(--gold) !important; color:#fff !important; }
+
+/* Disclaimer bar */
+.disclaimer-bar { background:#141416 !important; border-color:#ffffff !important; }
+.disclaimer-bar p, .disclaimer-bar p strong { color:#f2ede6 !important; }
+.disclaimer-bar svg { fill:#f2ede6; opacity:0.7; }
+
+/* Hero */
+#hero { background:#0a0a0c; }
+.hero-l { background:#111114 !important; }
+.hero-r { background:#0d0d10 !important; }
+.hero-title { color:#f2ede6 !important; }
+.hero-sub { color:#cccccc !important; }
+.hero-tag { color:var(--gold) !important; }
+.hero-disclaimer { color:#cccccc !important; }
+.hstat { background:#0d0d10 !important; border-color:#ffffff !important; }
+.hstat-n { color:var(--gold) !important; }
+.hstat-l { color:#cccccc !important; }
+.hero-cta-strip { background:#111114 !important; border-color:#ffffff !important; }
+.strip-label { color:#cccccc !important; }
+.strip-link { color:#f2ede6 !important; background:rgba(255,255,255,0.05) !important; border-color:#ffffff !important; }
+.license-badge { background:rgba(255,255,255,0.06) !important; border-color:#ffffff !important; }
+.license-text { color:#cccccc !important; }
+.license-text strong { color:#f2ede6 !important; }
+.license-icon { fill:var(--gold) !important; }
+.hero-photo-mobile { background:#0d0d10; }
+.hero-laser-badge { background:#1a1a1d !important; border-color:#ffffff !important; }
+
+/* Ticker */
+.ticker-wrap { background:#111114 !important; border-top:1px solid rgba(255,255,255,0.1) !important; border-bottom:1px solid rgba(255,255,255,0.1) !important; }
+.ticker span { color:#cccccc !important; }
+.ticker-dot { color:var(--gold) !important; }
+
+/* All sections */
+section { background:#0a0a0c; }
+#why, #devices, #vs-block, #price, #process, #trust,
+#certs, #gallery, #prep, #faq, #reviews, #contra,
+#footer-cta, #disclaimer, #contacts, #compare { border-color:#ffffff !important; }
+
+/* Why */
+#why { background:#0a0a0c !important; }
+.why-side { background:#111114 !important; border-color:#ffffff !important; }
+.why-card { background:#0a0a0c !important; border-color:#ffffff !important; }
+.why-card:hover { background:#141416 !important; }
+.why-card-title { color:#f2ede6 !important; }
+.why-card-text { color:#cccccc !important; }
+.why-crystal { background:#141416 !important; border-color:#ffffff !important; }
+.why-crystal-name { color:#f2ede6 !important; }
+.why-crystal-text { color:#cccccc !important; }
+.faq-side-text { color:#cccccc !important; }
+
+/* Devices */
+#devices { background:#0a0a0c !important; }
+.devices-header { border-color:#ffffff !important; }
+.devices-header .sec-title { color:#f2ede6 !important; }
+.devices-header-right { color:#cccccc !important; }
+.device-col-header-alex { background:#111114 !important; border-color:#ffffff !important; }
+.device-col-name { color:#f2ede6 !important; }
+.device-col-spec { background:#141416 !important; }
+.device-col-spec.highlight { background:rgba(168,131,74,0.18) !important; border:1px solid rgba(168,131,74,0.5) !important; }
+.device-col-spec-n { color:var(--gold) !important; }
+.device-col-spec-l { color:#cccccc !important; }
+.device-col-spec.highlight .device-col-spec-l { color:#f2ede6 !important; font-weight:600; }
+.device-col-desc { background:#111114 !important; border-color:#ffffff !important; }
+.device-col-desc p { color:#f2ede6 !important; }
+.device-col-tags { background:#111114 !important; }
+.device-col-alex { border-color:#ffffff !important; }
+.device-col-badge { background:var(--gold) !important; color:#0a0a0c !important; }
+
+/* VS block */
+#vs-block { background:#0a0a0c !important; }
+.vs-header { border-color:#ffffff !important; }
+.vs-mobile-head { background:#0a0a0c; }
+
+/* Price */
+#price { background:#0a0a0c !important; }
+.price-top .sec-title { color:#f2ede6 !important; }
+.price-note { color:#cccccc !important; }
+.ptab { background:#141416 !important; color:#cccccc !important; border-color:#ffffff !important; }
+.ptab.on { background:var(--gold) !important; color:#0a0a0c !important; }
+.acc-head { background:#141416 !important; }
+.price-row-full { border-color:#ffffff !important; }
+.price-row-full:hover { background:#141416 !important; }
+.price-zone { color:#f2ede6 !important; }
+.price-multi small { color:#cccccc !important; }
+.complex-grid { background:rgba(255,255,255,0.08) !important; border-color:#ffffff !important; }
+.complex-card { background:#141416 !important; }
+.complex-card:hover { background:#1c1c1f !important; }
+.complex-name { color:#f2ede6 !important; }
+.complex-zones { color:#cccccc !important; }
+.complex-sub-prices span { color:#cccccc !important; }
+.price-cta-note { color:#cccccc !important; }
+.price-club-row { background:#0a0a0c !important; border-color:#ffffff !important; }
+.price-club-label { color:#cccccc !important; }
+
+/* Process */
+#process { background:#0a0a0c !important; }
+.process-head { border-color:#ffffff !important; }
+.process-head .sec-title { color:#f2ede6 !important; }
+.pstep { border-color:#ffffff !important; background:#0a0a0c; }
+.pstep-title { color:#f2ede6 !important; }
+.pstep-text { color:#cccccc !important; }
+
+/* Certs */
+#certs { background:#0a0a0c !important; }
+.certs-header { border-color:#ffffff !important; }
+.certs-header .sec-title { color:#f2ede6 !important; }
+.certs-header-right { color:#cccccc !important; }
+.cert-item { background:#0a0a0c !important; border-color:#ffffff !important; }
+.cert-item:hover { background:#141416 !important; }
+.cert-badge { background:rgba(168,131,74,0.15) !important; border-color:#cccccc !important; }
+.cert-title { color:#f2ede6 !important; }
+.cert-row-item { color:#cccccc !important; }
+.cert-row-item strong { color:#f2ede6 !important; }
+.cert-shield { background:#f2ede6 !important; }
+.cert-shield svg { fill:#0a0a0c !important; }
+.cert-note { color:#cccccc !important; }
+.cert-open-btn { color:#f2ede6 !important; border-color:#ffffff !important; }
+
+/* Gallery */
+#gallery { background:#0a0a0c !important; }
+.gallery-header { border-color:#ffffff !important; }
+
+/* Prep */
+#prep { background:#0a0a0c !important; }
+.prep-col { background:#0a0a0c; border-color:#ffffff !important; }
+.prep-col:first-child { background:#111114 !important; }
+.prep-item { border-color:#ffffff !important; }
+.prep-rules { color:#cccccc !important; }
+
+/* FAQ */
+#faq { background:#0a0a0c !important; }
+.faq-side { background:#111114 !important; border-color:#ffffff !important; }
+.faq-list { background:#0a0a0c; }
+.faq-item { border-color:#ffffff !important; }
+.faq-q { color:#f2ede6 !important; }
+.faq-a-in { color:#cccccc !important; }
+
+/* Reviews */
+#reviews { background:#0a0a0c !important; }
+.reviews-grid { background:rgba(255,255,255,0.08) !important; border-color:#ffffff !important; }
+.rev-card { background:#141416 !important; }
+.rev-card:hover { background:#1c1c1f !important; }
+.rev-text { color:#f2ede6 !important; }
+.rev-name { color:#f2ede6 !important; }
+.rev-src { border-color:#ffffff !important; }
+.src-btn { color:#cccccc !important; border-color:#ffffff !important; }
+
+/* Contra */
+#contra { background:#0a0a0c !important; }
+.contra-left .sec-title { color:#f2ede6 !important; }
+.contra-left p { color:#cccccc !important; }
+.ctag { color:#f2ede6 !important; border-color:#ffffff !important; background:rgba(255,255,255,0.04) !important; }
+
+/* Contacts */
+#contacts { background:#0a0a0c !important; }
+.contacts-info { background:#111114 !important; }
+.contacts-info .sec-title { color:#f2ede6 !important; }
+.contact-row { border-color:#ffffff !important; }
+.contact-k { color:#cccccc !important; }
+.contact-v { color:#f2ede6 !important; }
+.contacts-map { background:#141416 !important; }
+
+/* Disclaimer section */
+#disclaimer { background:#111114 !important; border-top:2px solid var(--gold) !important; }
+.disclaimer-icon-wrap { background:var(--gold) !important; }
+.disclaimer-text { color:#cccccc !important; }
+.disclaimer-text strong { color:#f2ede6 !important; }
+
+/* Buttons */
+.btn-gold { color:#0a0a0c !important; }
+.btn-outline { color:#f2ede6 !important; border-color:#ffffff !important; }
+.btn-outline:hover { background:rgba(255,255,255,0.08) !important; border-color:var(--gold) !important; }
+.hero-btn-call { background:#1a1a1d !important; color:#f2ede6 !important; border:1px solid rgba(255,255,255,0.2) !important; }
+
+/* Popups */
+.mess-popup-box { background:#1a1a1d !important; }
+.mess-popup-title { color:#f2ede6 !important; }
+.mess-popup-btn { background:#222226 !important; color:#f2ede6 !important; border-color:#ffffff !important; }
+.mess-popup-btn svg { fill:#f2ede6 !important; }
+.mess-popup-btn.mess-max svg { fill:#f2ede6 !important; }
+.mess-popup-close { color:#f2ede6 !important; border-color:#ffffff !important; }
+.pdf-modal-box { background:#1a1a1d !important; }
+.pdf-modal-head { background:#141416 !important; border-color:#ffffff !important; }
+.pdf-modal-title { color:#f2ede6 !important; }
+.pdf-modal-close { background:rgba(255,255,255,0.1) !important; }
+
+/* Footer */
+footer { background:#0a0a0c !important; border-color:#ffffff !important; }
+.f-logo { color:#f2ede6 !important; }
+.f-note { color:#cccccc !important; }
+.f-note a { color:var(--gold) !important; }
+
+/* Sec titles default */
+.sec-title { color:#f2ede6 !important; }
+.sec-eyebrow { color:var(--gold) !important; }
+
+/* Gold structural dividers */
+:root{
+  --line-gold:rgba(196,160,104,.58);
+  --line-gold-soft:rgba(196,160,104,.34);
+}
+nav,.ticker-wrap,.disclaimer-bar,.hero-cta-strip,.hstat,.strip-link,.license-badge,.hero-laser-badge,
+#why,#devices,#vs-block,#price,#process,#trust,#certs,#gallery,#prep,#faq,#reviews,#contra,#footer-cta,#disclaimer,#contacts,#compare,
+.why-side,.why-card,.why-crystal,.devices-header,.device-col-header-alex,.device-col-desc,.device-col-alex,
+.dev-specs-diod,.vs-header,.ptab,.price-row-full,.complex-grid,.price-club-row,.process-head,.pstep,
+.certs-header,.cert-item,.cert-open-btn,.gallery-header,.prep-col,.prep-item,.faq-side,.faq-item,
+.reviews-grid,.rev-src,.src-btn,.ctag,.contact-row,.btn-outline,.mess-popup-btn,.mess-popup-close,
+.pdf-modal-head,footer{
+  border-color:var(--line-gold) !important;
+}
+.ticker-wrap{
+  border-top-color:var(--line-gold) !important;
+  border-bottom-color:var(--line-gold) !important;
+}
+.trust-grid,.complex-grid,.reviews-grid{
+  background:var(--line-gold-soft) !important;
+}
+.pstep:nth-child(n+4),#prep::before{
+  border-top-color:var(--line-gold) !important;
+}
+.hero-btn-call{
+  border-color:var(--line-gold) !important;
+}
+
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<!-- MESSENGER POPUP -->
+<div class="mess-popup" id="messPopup">
+  <div class="mess-popup-overlay" onclick="closeMessPopup()"></div>
+  <div class="mess-popup-box">
+    <div class="mess-popup-title">Написать в мессенджер</div>
+    <a class="mess-popup-btn" href="https://wa.me/79250293925" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.565 4.14 1.547 5.87L0 24l6.326-1.527A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.954 0-3.77-.526-5.33-1.437l-.38-.23-3.756.907.96-3.658-.248-.392A9.959 9.959 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a class="mess-popup-btn" href="https://t.me/username" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      <span>Telegram</span>
+    </a>
+    <a class="mess-popup-btn mess-max" href="#" target="_blank">
+      <svg viewBox="0 0 321.12 319.73"><path fill-rule="evenodd" d="M164.01,318.82c-31.51,0-46.16-4.6-71.61-23-16.1,20.7-67.09,36.88-69.31,9.2,0-20.78-4.6-38.34-9.81-57.51C7.05,223.89,0,197.59,0,159.48,0,68.47,74.68,0,163.17,0s157.95,71.84,157.95,160.33c.3,87.12-69.99,158.02-157.11,158.49ZM165.31,78.67c-43.09-2.22-76.68,27.6-84.11,74.38-6.13,38.72,4.75,85.88,14.03,88.33,4.45,1.07,15.64-7.97,22.62-14.95,11.54,7.97,24.97,12.76,38.95,13.88,44.65,2.15,82.8-31.84,85.8-76.45,1.75-44.7-32.63-82.55-77.29-85.11v-.08Z"/></svg>
+      <span>Макс</span>
+    </a>
+    <button class="mess-popup-close" onclick="closeMessPopup()">Закрыть</button>
+  </div>
+</div>
+
+<!-- FLOATING CTA BAR -->
+<div class="float-bar" id="floatBar">
+  <a class="float-btn call" href="tel:+79250293925">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    <span>Позвонить</span>
+  </a>
+  <button class="float-btn write" onclick="openMessPopup()">
+    <svg viewBox="0 0 321.12 319.73" style="fill:white"><path fill-rule="evenodd" d="M164.01,318.82c-31.51,0-46.16-4.6-71.61-23-16.1,20.7-67.09,36.88-69.31,9.2,0-20.78-4.6-38.34-9.81-57.51C7.05,223.89,0,197.59,0,159.48,0,68.47,74.68,0,163.17,0s157.95,71.84,157.95,160.33c.3,87.12-69.99,158.02-157.11,158.49ZM165.31,78.67c-43.09-2.22-76.68,27.6-84.11,74.38-6.13,38.72,4.75,85.88,14.03,88.33,4.45,1.07,15.64-7.97,22.62-14.95,11.54,7.97,24.97,12.76,38.95,13.88,44.65,2.15,82.8-31.84,85.8-76.45,1.75-44.7-32.63-82.55-77.29-85.11v-.08Z"/></svg>
+    <span>Написать</span>
+  </button>
+</div>
+
+
+<!-- NAV -->
+<nav>
+<div class="nav-inner">
+  <div class="nav-logo">Dr<span>.</span>Laser</div>
+  <ul class="nav-links">
+    <li><a href="#why">Александрит</a></li>
+    <li><a href="#vs-block">Сравнение</a></li>
+    <li><a href="#price">Цены</a></li>
+    <li><a href="#process">Процесс</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#footer-cta">Контакты</a></li>
+  </ul>
+  <div class="nav-right">
+    <a class="nav-phone" href="tel:+79250293925">+7 925 029-39-25</a>
+    <a class="nav-cta" href="#footer-cta">Записаться</a>
+  </div>
+</div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-l">
+    <div class="hero-tag r">✦ Студия лазерной эпиляции · Москва · м. Беговая</div>
+    <h1 class="hero-title r">Гладкость,<br>которую вы<br><em>заслужили</em></h1>
+
+    <!-- ФОТО СТУДИИ сразу под заголовком — только мобиль -->
+    <div class="hero-photo-mobile r">
+      <img src="assets/images/hero.webp" alt="Интерьер студии Dr.Laser" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block">
+    </div>
+
+
+    <p class="hero-sub r">Медицинская точность. Клинический комфорт. Долговременное снижение роста волос — с подбором лазера под ваш фототип.</p>
+
+    <!-- КНОПКИ В РЯД -->
+    <div class="hero-btns-row r">
+      <a class="hero-btn-call" href="tel:+79250293925">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Позвонить
+      </a>
+      <button class="hero-btn-write" onclick="openMessPopup()">
+        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+        Написать
+      </button>
+    </div>
+
+    <p class="hero-disclaimer r">Имеются противопоказания. Необходима консультация специалиста.</p>
+    <div class="license-badge r">
+      <svg class="license-icon" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+      <div class="license-text">
+        <strong>Мед. лицензия № Л041-01137-77/01397553</strong>
+        Департамент здравоохранения г. Москвы · 25.09.2024
+      </div>
+    </div>
+  </div>
+  <div class="hero-r r">
+    <div class="hero-photo" style="padding:0;overflow:hidden">
+      <img src="assets/images/hero.webp" alt="Интерьер студии Dr.Laser" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block">
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><span class="hstat-n">755</span><span class="hstat-l">нм александрит</span></div>
+      <div class="hstat"><span class="hstat-n">6–8</span><span class="hstat-l">процедур в курсе</span></div>
+      <div class="hstat"><span class="hstat-n">1 сеанс</span><span class="hstat-l">виден результат</span></div>
+    </div>
+    <div class="hero-cta-strip">
+      <span class="strip-label">Записаться прямо сейчас:</span>
+      <a class="strip-link" href="tel:+79250293925"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> Позвонить</a>
+      <button class="strip-link" onclick="openMessPopup()" style="cursor:pointer"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg> Написать</button>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>Александритовый лазер <em>755нм</em></span><em>·</em>
+    <span>Диодный лазер</span><em>·</em>
+    <span>Подбор по фототипу</span><em>·</em>
+    <span>Медицинская лицензия</span><em>·</em>
+    <span>Консультация перед процедурой</span><em>·</em>
+    <span>Результат с первой процедуры</span><em>·</em>
+    <span>Все зоны тела</span><em>·</em>
+    <span>Александритовый лазер <em>755нм</em></span><em>·</em>
+    <span>Диодный лазер</span><em>·</em>
+    <span>Подбор по фототипу</span><em>·</em>
+    <span>Медицинская лицензия</span><em>·</em>
+    <span>Консультация перед процедурой</span><em>·</em>
+    <span>Результат с первой процедуры</span><em>·</em>
+    <span>Все зоны тела</span><em>·</em>
+  </div>
+</div>
+
+<!-- ═══ DEVICES ═══ -->
+<section id="devices">
+  <div class="devices-header r">
+    <div>
+      <div class="sec-eyebrow">— Два аппарата в студии</div>
+      <h2 class="sec-title" style="margin-top:12px">Александрит<br><em>и диодный лазер</em></h2>
+    </div>
+    <div class="devices-header-right">
+      Не подгоняем всех под один аппарат. Специалист подбирает лазер по фототипу кожи, загару и структуре волоса.
+    </div>
+  </div>
+  <div class="devices-grid">
+
+    <!-- ALEX -->
+    <div class="device-col-alex r">
+      <div class="device-col-header-alex">
+        <span class="device-col-badge">✦ Рекомендуем · Основной аппарат</span>
+        <div class="device-col-name">Ixtron<em>Sprint Alex</em></div>
+        <div class="device-col-wave">755 нм · Александрит</div>
+      </div>
+      <div class="device-col-specs">
+        <div class="device-col-spec">
+          <span class="device-col-spec-n">755</span>
+          <span class="device-col-spec-l">нм · длина волны</span>
+        </div>
+        <div class="device-col-spec highlight">
+          <span class="device-col-spec-badge">✦ ТОП</span>
+          <span class="device-col-spec-n">I–IV</span>
+          <span class="device-col-spec-l">Лучший результат</span>
+        </div>
+        <div class="device-col-spec highlight">
+          <span class="device-col-spec-badge">✦ БЫСТРО</span>
+          <span class="device-col-spec-n">1–3</span>
+          <span class="device-col-spec-l">Сеанса — виден эффект</span>
+        </div>
+        <div class="device-col-spec">
+          <span class="device-col-spec-n">Светлая</span>
+          <span class="device-col-spec-l">Оптимальный тип кожи</span>
+        </div>
+      </div>
+      <div class="device-col-desc">
+        <p>Александритовый лазер последнего поколения. Волна 755 нм активно поглощается меланином волоса — быстрый, чистый, визуально заметный результат уже после первых процедур. Особенно эффективен на светлой коже с тёмными или русыми волосами.</p>
+      </div>
+      <div class="device-col-tags">
+        <span class="device-tag-gold">Светлая кожа</span>
+        <span class="device-tag-gold">Тёмные волосы</span>
+        <span class="device-tag-gold">Русые волосы</span>
+        <span class="device-tag-gold">Быстрый результат</span>
+        <span class="device-tag-gold">Премиум</span>
+      </div>
+    </div>
+
+    <!-- DIOD -->
+    <div class="device-col-diod r d1">
+      <div class="device-col-header-diod">
+        <span class="device-col-badge-diod">— Второй аппарат · Альтернативный выбор</span>
+        <div class="device-col-name-diod">IN-MOTION<em>D1, D2</em></div>
+        <div class="device-col-wave-diod">808 нм · Диодный</div>
+      </div>
+      <div class="device-col-specs-diod">
+        <div class="device-col-spec-diod">
+          <span class="device-col-spec-n" style="color:#ffffff">808</span>
+          <span class="device-col-spec-l" style="color:#cccccc">нм · длина волны</span>
+        </div>
+        <div class="device-col-spec-diod highlight">
+          <span class="device-col-spec-badge">✦ УНИКАЛЬНО</span>
+          <span class="device-col-spec-n" style="color:#fff">I–VI</span>
+          <span class="device-col-spec-l" style="color:#ffffff;font-weight:600">Все фототипы кожи</span>
+        </div>
+        <div class="device-col-spec-diod highlight">
+          <span class="device-col-spec-badge">✦ ГЛАВНЫЙ ПЛЮС</span>
+          <span class="device-col-spec-n" style="color:#fff">Загар</span>
+          <span class="device-col-spec-l" style="color:#ffffff;font-weight:600">Работает при загаре</span>
+        </div>
+        <div class="device-col-spec-diod">
+          <span class="device-col-spec-n" style="color:#ffffff">3–5</span>
+          <span class="device-col-spec-l" style="color:#cccccc">Сеансов — виден эффект</span>
+        </div>
+      </div>
+      <div class="device-col-desc-diod">
+        <p>Надёжный диодный лазер для всех 6 фототипов кожи. Используется когда александрит не подходит — смуглая кожа, свежий загар. Система охлаждения охлаждение снижает дискомфорт. Эффективность подтверждена Росздравнадзором.</p>
+      </div>
+      <div class="device-col-tags-diod">
+        <span class="device-tag-grey">Смуглая кожа</span>
+        <span class="device-tag-grey">Загар</span>
+        <span class="device-tag-grey">Все фототипы</span>
+        <span class="device-tag-grey">Плотный волос</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ VS BLOCK ═══ -->
+<section id="vs-block">
+  <div class="vs-header r">
+    <div class="sec-eyebrow">— Сравнение по параметрам</div>
+    <h2 class="sec-title" style="margin-top:12px">Два лазера —<br><em>в чём разница</em></h2>
+    <p class="vs-intro-text">Одинаковые параметры, честное сравнение. Специалист всегда подбирает аппарат индивидуально — но вот общая картина.</p>
+  </div>
+
+  <!-- DESKTOP TABLE -->
+  <div class="vs-desktop r">
+    <div class="vs-table">
+      <div class="vs-row vs-head">
+        <div class="vs-param">Параметр</div>
+        <div class="vs-alex-col">
+          <div class="vs-col-badge">✦ Рекомендуем</div>
+          <div class="vs-col-name">Ixtron Sprint Alex</div>
+          <div class="vs-col-sub">Александрит · 755 нм</div>
+        </div>
+        <div class="vs-diod-col">
+          <div class="vs-col-name" style="color:#ffffff">IN-MOTION D1,D2</div>
+          <div class="vs-col-sub" style="color:#dddddd">Диодный · 808 нм</div>
+        </div>
+      </div>
+      <div class="vs-row"><div class="vs-param">Скорость видимого эффекта</div><div class="vs-alex-val vs-win">1–3 сеанса <span class="vs-star">✦</span></div><div class="vs-diod-val">3–5 сеансов</div></div>
+      <div class="vs-row"><div class="vs-param">Результат после курса</div><div class="vs-alex-val vs-win">Выраженный, быстрый <span class="vs-star">✦</span></div><div class="vs-diod-val">Стабильный, постепенный</div></div>
+      <div class="vs-row"><div class="vs-param">Оптимальный тип кожи</div><div class="vs-alex-val vs-win">I–IV · Светлая, нормальная <span class="vs-star">✦</span></div><div class="vs-diod-val">I–VI · Любой, включая смуглую</div></div>
+      <div class="vs-row"><div class="vs-param">Работа с тёмными волосами</div><div class="vs-alex-val vs-win">Отлично <span class="vs-star">✦</span></div><div class="vs-diod-val">Хорошо</div></div>
+      <div class="vs-row"><div class="vs-param">Работа с русыми и тонкими волосами</div><div class="vs-alex-val vs-win">Лучше диода <span class="vs-star">✦</span></div><div class="vs-diod-val">Удовлетворительно</div></div>
+      <div class="vs-row"><div class="vs-param">При свежем загаре</div><div class="vs-alex-val vs-no">Не рекомендуется</div><div class="vs-diod-val vs-win">Предпочтителен <span class="vs-star">✦</span></div></div>
+      <div class="vs-row"><div class="vs-param">При смуглой коже</div><div class="vs-alex-val vs-no">Не рекомендуется</div><div class="vs-diod-val vs-win">Оптимален <span class="vs-star">✦</span></div></div>
+      <div class="vs-row"><div class="vs-param">Скорость обработки зон</div><div class="vs-alex-val vs-win">Высокая · большое пятно <span class="vs-star">✦</span></div><div class="vs-diod-val">Стандартная</div></div>
+      <div class="vs-row"><div class="vs-param">Класс оборудования</div><div class="vs-alex-val vs-win">Премиум · последнее поколение <span class="vs-star">✦</span></div><div class="vs-diod-val">Профессиональный</div></div>
+      <div class="vs-row vs-footer"><div class="vs-param">Кому подходит</div><div class="vs-alex-val" style="color:var(--gold2);font-weight:600">Светлая кожа · тёмные и русые волосы · быстрый результат</div><div class="vs-diod-val" style="color:#ffffff">Смуглая кожа · загар · универсальный вариант</div></div>
+    </div>
+  </div>
+
+  <!-- MOBILE CARDS -->
+  <div class="vs-mobile r">
+    <div class="vs-mobile-head">
+      <div class="vs-mobile-col vs-mobile-alex">
+        <div class="vs-col-badge">✦ Рекомендуем</div>
+        <div class="vs-col-name">Ixtron Sprint Alex</div>
+        <div class="vs-col-sub">Александрит · 755 нм</div>
+      </div>
+      <div class="vs-mobile-col vs-mobile-diod">
+        <div class="vs-col-name">IN-MOTION D1,D2</div>
+        <div class="vs-col-sub">Диодный · 808 нм</div>
+      </div>
+    </div>
+    <div class="vs-mobile-row">
+      <div class="vs-mobile-label">Скорость эффекта</div>
+      <div class="vs-mobile-vals">
+        <div class="vs-mobile-val win">1–3 сеанса ✦</div>
+        <div class="vs-mobile-val">3–5 сеансов</div>
+      </div>
+    </div>
+    <div class="vs-mobile-row">
+      <div class="vs-mobile-label">Тип кожи</div>
+      <div class="vs-mobile-vals">
+        <div class="vs-mobile-val win">I–IV Светлая ✦</div>
+        <div class="vs-mobile-val">I–VI Любой</div>
+      </div>
+    </div>
+    <div class="vs-mobile-row">
+      <div class="vs-mobile-label">Тёмные волосы</div>
+      <div class="vs-mobile-vals">
+        <div class="vs-mobile-val win">Отлично ✦</div>
+        <div class="vs-mobile-val">Хорошо</div>
+      </div>
+    </div>
+    <div class="vs-mobile-row">
+      <div class="vs-mobile-label">Русые волосы</div>
+      <div class="vs-mobile-vals">
+        <div class="vs-mobile-val win">Лучше диода ✦</div>
+        <div class="vs-mobile-val">Удовлетворительно</div>
+      </div>
+    </div>
+    <div class="vs-mobile-row">
+      <div class="vs-mobile-label">При загаре</div>
+      <div class="vs-mobile-vals">
+        <div class="vs-mobile-val no">Не рекомендуется</div>
+        <div class="vs-mobile-val win">Предпочтителен ✦</div>
+      </div>
+    </div>
+    <div class="vs-mobile-row">
+      <div class="vs-mobile-label">Смуглая кожа</div>
+      <div class="vs-mobile-vals">
+        <div class="vs-mobile-val no">Не рекомендуется</div>
+        <div class="vs-mobile-val win">Оптимален ✦</div>
+      </div>
+    </div>
+    <div class="vs-mobile-row">
+      <div class="vs-mobile-label">Скорость</div>
+      <div class="vs-mobile-vals">
+        <div class="vs-mobile-val win">Высокая ✦</div>
+        <div class="vs-mobile-val">Стандартная</div>
+      </div>
+    </div>
+    <div class="vs-mobile-row">
+      <div class="vs-mobile-label">Класс</div>
+      <div class="vs-mobile-vals">
+        <div class="vs-mobile-val win">Премиум ✦</div>
+        <div class="vs-mobile-val">Проф.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="vs-cta-row r">
+    <a class="btn-gold-inv" href="tel:+79250293925"><svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:currentColor;margin-right:8px;vertical-align:middle"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Позвонить</a>
+    <button class="btn-ghost" onclick="openMessPopup()" style="cursor:pointer"><svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:currentColor;margin-right:8px;vertical-align:middle"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>Написать</button>
+    <span class="vs-cta-note">Не уверены? Специалист подберёт на бесплатной консультации</span>
+  </div>
+</section>
+
+<!-- ═══ PRICE ═══ -->
+<section id="price">
+  <div class="price-top r">
+    <div>
+      <div class="sec-eyebrow">— Цены · Александритовый лазер</div>
+      <h2 class="sec-title" style="margin-top:12px">Зоны и комплексы</h2>
+      <p class="price-note" style="margin-top:12px">Первая процедура — пробная по специальной цене. По клубной карте — скидка на весь курс. Цены указаны на александритовый лазер.</p>
+    </div>
+    <div class="price-tabs">
+      <div class="ptab" onclick="switchP(this,'w')">Зоны</div>
+      <div class="ptab on" onclick="switchP(this,'c')">Комплексы</div>
+    </div>
+  </div>
+
+  <!-- ZONES -->
+  <div class="ppanel" id="pw">
+    <div class="price-cols-head">
+      <span></span>
+      <span>1-я пробная</span>
+      <span>По карте</span>
+      <span>3 проц.</span>
+      <span>5 проц.</span>
+    </div>
+
+    <div class="price-acc-group">
+      <div class="acc-head acc-open" onclick="toggleAcc(this)">Малая зона ХС <span class="acc-icon">+</span></div>
+      <div class="acc-body">
+        <div class="price-row-full"><span class="price-zone">Ареолы · Бакенбарды · Верхняя губа · Подбородок · Пальцы рук/ног</span><span class="price-multi"><b>1 255</b><small>по карте 1 004</small><small>×3 — 1 130/проц.</small><small>×5 — 1 067/проц.</small></span></div>
+      </div>
+    </div>
+
+    <div class="price-acc-group">
+      <div class="acc-head" onclick="toggleAcc(this)">Малая зона С <span class="acc-icon">+</span></div>
+      <div class="acc-body">
+        <div class="price-row-full"><span class="price-zone">Кисти рук · Линия живота · Межъягодичная впадина · Подмышечные впадины</span><span class="price-multi"><b>1 390</b><small>по карте 1 112</small><small>×3 — 1 250/проц.</small><small>×5 — 1 182/проц.</small></span></div>
+      </div>
+    </div>
+
+    <div class="price-acc-group">
+      <div class="acc-head" onclick="toggleAcc(this)">Средняя зона М <span class="acc-icon">+</span></div>
+      <div class="acc-body">
+        <div class="price-row-full"><span class="price-zone">Бикини классическое · Живот полностью · Лицо полностью · Поясница · Руки до/выше локтя · Шея передняя/задняя · Ягодицы</span><span class="price-multi"><b>2 835</b><small>по карте 2 268</small><small>×3 — 2 550/проц.</small><small>×5 — 2 410/проц.</small></span></div>
+      </div>
+    </div>
+
+    <div class="price-acc-group">
+      <div class="acc-head" onclick="toggleAcc(this)">Большая зона Л <span class="acc-icon">+</span></div>
+      <div class="acc-body">
+        <div class="price-row-full"><span class="price-zone">Бикини глубокое · Шея полностью · Бёдра (включая колени) · Голени (включая колени) · Руки полностью · Спина полностью</span><span class="price-multi"><b>3 915</b><small>по карте 3 132</small><small>×3 — 3 525/проц.</small><small>×5 — 3 328/проц.</small></span></div>
+      </div>
+    </div>
+
+    <div class="price-acc-group">
+      <div class="acc-head" onclick="toggleAcc(this)">Экстра зона ХЛ <span class="acc-icon">+</span></div>
+      <div class="acc-body">
+        <div class="price-row-full"><span class="price-zone">Ноги полностью (2 зоны)</span><span class="price-multi"><b>6 075</b><small>по карте 4 860</small><small>×3 — 5 475/проц.</small><small>×5 — 5 164/проц.</small></span></div>
+      </div>
+    </div>
+
+    <div class="price-club-row">
+      <div class="price-club-label">Клубная карта — скидка на весь курс</div>
+      <div class="price-club-vals"><span><b>1 500 ₽</b><small>6 месяцев</small></span><span><b>2 500 ₽</b><small>12 месяцев</small></span></div>
+    </div>
+  </div>
+
+  <!-- COMPLEXES -->
+  <div class="ppanel on" id="pc">
+    <div class="complex-grid">
+      <div class="complex-card r">
+        <div class="complex-tag">Мини</div>
+        <div class="complex-name">Малый комплекс</div>
+        <p class="complex-zones">Подмышечные впадины + глубокое бикини</p>
+        <div class="complex-price">4 556 ₽</div>
+        <div class="complex-sub-prices">
+          <span>По карте — 3 645</span>
+          <span>×3 — 4 100/проц.</span>
+          <span>×5 — 3 873/проц.</span>
+        </div>
+      </div>
+      <div class="complex-card r">
+        <div class="complex-tag">Мини+</div>
+        <div class="complex-name">Малый комплекс+</div>
+        <p class="complex-zones">Подмышечные впадины + глубокое бикини + верхняя губа</p>
+        <div class="complex-price">4 590 ₽</div>
+        <div class="complex-sub-prices">
+          <span>По карте — 3 672</span>
+          <span>×3 — 4 131/проц.</span>
+          <span>×5 — 3 902/проц.</span>
+        </div>
+      </div>
+      <div class="complex-card r">
+        <div class="complex-tag">Медиум</div>
+        <div class="complex-name">Средний комплекс</div>
+        <p class="complex-zones">Подмышечные впадины + глубокое бикини + голени</p>
+        <div class="complex-price">7 958 ₽</div>
+        <div class="complex-sub-prices">
+          <span>По карте — 6 365</span>
+          <span>×3 — 7 165/проц.</span>
+          <span>×5 — 6 764/проц.</span>
+        </div>
+      </div>
+      <div class="complex-card r">
+        <div class="complex-tag">Макси</div>
+        <div class="complex-name">Большой комплекс</div>
+        <p class="complex-zones">Подмышечные впадины + глубокое бикини + голени + бёдра</p>
+        <div class="complex-price">11 360 ₽</div>
+        <div class="complex-sub-prices">
+          <span>По карте — 9 088</span>
+          <span>×3 — 10 224/проц.</span>
+          <span>×5 — 9 656/проц.</span>
+        </div>
+      </div>
+      <div class="complex-card r" style="grid-column:1/-1;text-align:center;display:flex;flex-direction:column;align-items:center">
+        <div class="complex-tag">Ультра</div>
+        <div class="complex-name">Экстра комплекс</div>
+        <p class="complex-zones">Подмышечные впадины + глубокое бикини + ноги полностью + руки полностью</p>
+        <div class="complex-price">14 762 ₽</div>
+        <div class="complex-sub-prices">
+          <span>По карте — 11 850</span>
+          <span>×3 — 13 290/проц.</span>
+          <span>×5 — 12 548/проц.</span>
+        </div>
+        <p style="font-size:11px;color:#111111;margin-top:12px;font-style:italic">* возможна замена зон из аналогичных категорий</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLUB + CTA UNIFIED -->
+  <div class="price-bottom-block">
+    <div class="price-bottom-label">Клубная карта — скидка на весь курс</div>
+    <div class="price-bottom-vals">
+      <div class="price-bottom-val">
+        <span class="price-bottom-price">1 500 ₽</span>
+        <span class="price-bottom-period">6 месяцев</span>
+      </div>
+      <div class="price-bottom-sep"></div>
+      <div class="price-bottom-val">
+        <span class="price-bottom-price">2 500 ₽</span>
+        <span class="price-bottom-period">12 месяцев</span>
+      </div>
+    </div>
+    <div class="price-bottom-btns">
+      <a class="btn-gold" href="tel:+79250293925"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> Позвонить</a>
+      <button class="btn-outline" onclick="openMessPopup()" style="cursor:pointer"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg> Написать</button>
+    </div>
+    <div class="price-bottom-note">Консультация и подбор аппарата — бесплатно</div>
+  </div>
+
+  <div class="price-cta-row r" style="display:none">
+    <a class="btn-gold" href="tel:+79250293925"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> Позвонить</a>
+    <button class="btn-outline" onclick="openMessPopup()" style="cursor:pointer"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg> Написать</button>
+    <span class="price-cta-note">Консультация и подбор аппарата — бесплатно</span>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section id="process">
+  <div class="process-head r">
+    <div>
+      <div class="sec-eyebrow">— Как проходит</div>
+      <h2 class="sec-title" style="margin-top:12px">Первый визит<br><em>от А до Я</em></h2>
+    </div>
+    <a class="btn-gold" href="tel:+79250293925"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> Позвонить</a>
+  </div>
+  <div class="process-steps">
+    <div class="pstep r">
+      <span class="pstep-n">01</span>
+      <div class="pstep-title">Консультация</div>
+      <p class="pstep-text">Специалист уточняет фототип, загар, наличие противопоказаний, препараты и ожидания. Без давления, честно.</p>
+    </div>
+    <div class="pstep r d1">
+      <span class="pstep-n">02</span>
+      <div class="pstep-title">Выбор лазера</div>
+      <p class="pstep-text">Светлая кожа и тёмный волос — чаще александрит. Загар или смуглая кожа — рассматриваем диод. Критерий один: безопасность и результат.</p>
+    </div>
+    <div class="pstep r d2">
+      <span class="pstep-n">03</span>
+      <div class="pstep-title">Подготовка зоны</div>
+      <p class="pstep-text">Кожа очищается, выдаются защитные очки. Одноразовые расходники, полная стерильность.</p>
+    </div>
+    <div class="pstep r d3">
+      <span class="pstep-n">04</span>
+      <div class="pstep-title">Процедура</div>
+      <p class="pstep-text">Импульсы лазера с охлаждением кожи. Ощущения — тепло или короткий щелчок. От 15 минут в зависимости от зоны.</p>
+    </div>
+    <div class="pstep r">
+      <span class="pstep-n">05</span>
+      <div class="pstep-title">Рекомендации</div>
+      <p class="pstep-text">Памятка: что можно и нельзя, когда ждать выпадения волос, когда следующий сеанс. Всё понятно и без лишнего.</p>
+    </div>
+    <div class="pstep r d1">
+      <span class="pstep-n">06</span>
+      <div class="pstep-title">Следующий сеанс</div>
+      <p class="pstep-text">Интервал — 4–8 недель. Напомним сами. Курс обычно 6–8 процедур — и результат надолго.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRUST ═══ -->
+<section id="trust">
+  <div class="sec-eyebrow r">— Почему выбирают нас</div>
+  <h2 class="sec-title r">Мы создали пространство,<br>где <em>каждая деталь</em> продумана</h2>
+  <div class="trust-grid">
+    <div class="trust-card r">
+      <div class="trust-line"></div>
+      <div class="trust-title">Медицинский подход</div>
+      <p class="trust-text">Медицинская лицензия, регистрационные документы на оборудование. Перед каждой процедурой — консультация и оценка противопоказаний.</p>
+    </div>
+    <div class="trust-card r d1">
+      <div class="trust-line"></div>
+      <div class="trust-title">Два аппарата в студии</div>
+      <p class="trust-text">Ixtron Sprint Alex (александрит, 755 нм) — для быстрого результата на светлой коже. IN-MOTION D1,D2 (диод, 808 нм) — когда нужен другой режим. Подбираем индивидуально.</p>
+    </div>
+    <div class="trust-card r d2">
+      <div class="trust-line"></div>
+      <div class="trust-title">Честно о результате</div>
+      <p class="trust-text">Корректная формулировка: долговременное снижение роста волос. Не «навсегда за 1 раз». Объясняем, сколько сеансов нужно и почему.</p>
+    </div>
+    <div class="trust-card r">
+      <div class="trust-line"></div>
+      <div class="trust-title">Персональный подход</div>
+      <p class="trust-text">Консультация перед каждым курсом. Подбор режима под ваш тип волоса и кожи. Рекомендации после каждой процедуры.</p>
+    </div>
+    <div class="trust-card r d1">
+      <div class="trust-line"></div>
+      <div class="trust-title">Комфорт и чистота</div>
+      <p class="trust-text">Одноразовые расходники, обработка оборудования, защитные очки. Охлаждение кожи во время процедуры.</p>
+    </div>
+    <div class="trust-card r d2">
+      <div class="trust-line"></div>
+      <div class="trust-title">Сертифицировано</div>
+      <p class="trust-text">Оборудование с регистрационными удостоверениями. Специалисты с медицинским образованием и регулярным обучением.</p>
+    </div>
+  </div>
+  <div class="trust-cta r">
+    <span class="trust-label">Готовы начать?</span>
+    <a class="btn-gold-inv" href="tel:+79250293925"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> Позвонить</a>
+    <button class="btn-ghost" onclick="openMessPopup()" style="cursor:pointer;border:none;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.3)"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg> Написать</button>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<section id="gallery">
+  <div class="gallery-header r">
+    <div class="sec-eyebrow">— Студия изнутри</div>
+    <h2 class="sec-title">Dr.Laser · <em>Беговая</em></h2>
+  </div>
+  <div class="slider-wrap">
+    <div class="slider-track" id="sliderTrack">
+          <div class="slide"><img src="assets/gallery/gallery-01.webp" alt="Интерьер студии Dr.Laser 1"></div>
+      <div class="slide"><img src="assets/gallery/gallery-02.webp" alt="Интерьер студии Dr.Laser 2"></div>
+      <div class="slide"><img src="assets/gallery/gallery-03.webp" alt="Интерьер студии Dr.Laser 3"></div>
+      <div class="slide"><img src="assets/gallery/gallery-04.webp" alt="Интерьер студии Dr.Laser 4"></div>
+      <div class="slide"><img src="assets/gallery/gallery-05.webp" alt="Интерьер студии Dr.Laser 5"></div>
+      <div class="slide"><img src="assets/gallery/gallery-06.webp" alt="Интерьер студии Dr.Laser 6"></div>
+      <div class="slide"><img src="assets/gallery/gallery-07.webp" alt="Интерьер студии Dr.Laser 7"></div>
+      <div class="slide"><img src="assets/gallery/gallery-08.webp" alt="Интерьер студии Dr.Laser 8"></div>
+
+    </div>
+  </div>
+  <div class="slider-nav">
+    <div class="slider-dots" id="sliderDots"></div>
+    <div class="slider-arrows">
+      <button class="slider-arrow" id="sliderPrev" aria-label="Назад">&#8592;</button>
+      <button class="slider-arrow" id="sliderNext" aria-label="Вперёд">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATES ═══ -->
+<section id="certs">
+  <div class="certs-header r">
+    <div>
+      <div class="sec-eyebrow">— Документы</div>
+      <h2 class="sec-title" style="margin-top:12px">Лицензии<br><em>и сертификаты</em></h2>
+    </div>
+    <div class="certs-header-right">
+      ООО «Доктор Лазер» работает на основании действующей медицинской лицензии Департамента здравоохранения г. Москвы и санитарно-эпидемиологического заключения Роспотребнадзора.
+    </div>
+  </div>
+  <div class="certs-grid">
+
+    <div class="cert-item r">
+      <div class="cert-icon-row">
+        <div class="cert-shield">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        </div>
+        <span class="cert-badge">Медицинская лицензия</span>
+      </div>
+      <div class="cert-title">Выписка из реестра лицензий</div>
+      <div class="cert-num">№ <span>Л041-01137-77/01397553</span></div>
+      <div class="cert-rows">
+        <div class="cert-row-item"><strong>Лицензиат</strong> ООО «Доктор Лазер»</div>
+        <div class="cert-row-item"><strong>Лицензирующий орган</strong> Департамент здравоохранения г. Москвы</div>
+        <div class="cert-row-item"><strong>Дата выдачи</strong> 25.09.2024</div>
+        <div class="cert-row-item"><strong>Приказ</strong> № 1331-Л от 25.09.2024</div>
+        <div class="cert-row-item"><strong>Вид деятельности</strong> Медицинская деятельность: косметология, сестринское дело в косметологии</div>
+        <div class="cert-row-item"><strong>Адрес</strong> 125284, Москва, ул. Маргелова, д. 3, корп. 3, помещ. 3Н</div>
+      </div>
+      <div class="cert-status">
+        <span class="cert-status-dot"></span>
+        <span class="cert-status-text">Лицензия действует</span>
+      </div>
+      <p class="cert-note">ОГРН: 1247700402795 · ИНН: 9714051060</p>
+      <button class="cert-open-btn" onclick="openPdf('assets/docs/license.jpg', 'Выписка из реестра лицензий · № Л041-01137-77/01397553')">
+        <svg viewBox="0 0 24 24"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 10h-3v3h-2v-3H10v-2h3V7h2v3h3v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"/></svg>
+        Открыть лицензию
+      </button>
+    </div>
+
+    <div class="cert-item r d1">
+      <div class="cert-icon-row">
+        <div class="cert-shield">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </div>
+        <span class="cert-badge">Роспотребнадзор</span>
+      </div>
+      <div class="cert-title">Санитарно-эпидемиологическое заключение</div>
+      <div class="cert-num">№ <span>77.07.16.000.М.004106.08.24</span></div>
+      <div class="cert-rows">
+        <div class="cert-row-item"><strong>Заявитель</strong> ООО «Доктор Лазер»</div>
+        <div class="cert-row-item"><strong>Орган</strong> Федеральная служба по надзору в сфере защиты прав потребителей (Роспотребнадзор), Северный АО г. Москвы</div>
+        <div class="cert-row-item"><strong>Дата выдачи</strong> 20.08.2024</div>
+        <div class="cert-row-item"><strong>Объект</strong> Здания, помещения и оборудование для медицинской деятельности: косметология, сестринское дело</div>
+        <div class="cert-row-item"><strong>Адрес</strong> Москва, ул. Маргелова, д. 3, корп. 3, помещ. 3Н</div>
+      </div>
+      <div class="cert-status">
+        <span class="cert-status-dot"></span>
+        <span class="cert-status-text">Соответствует санитарным нормам</span>
+      </div>
+      <p class="cert-note">Регистрационный № 3680218. Соответствует государственным санитарно-эпидемиологическим правилам и нормативам.</p>
+      <button class="cert-open-btn" onclick="openPdf('assets/docs/certificate.jpg', 'Санитарно-эпидемиологическое заключение')">
+        <svg viewBox="0 0 24 24"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 10h-3v3h-2v-3H10v-2h3V7h2v3h3v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"/></svg>
+        Открыть сертификат
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ PREP & AFTERCARE ═══ -->
+<section id="prep">
+  <div class="prep-col r">
+    <div class="sec-eyebrow">— Подготовка</div>
+    <h2 class="sec-title">Как подготовиться<br><em>к процедуре</em></h2>
+    <div class="prep-timeline">
+      <div class="prep-item">
+        <span class="prep-when">За 3–4 недели</span>
+        <ul class="prep-rules"><li>Не удалять волосы с корнем: воск, шугаринг, пинцет, эпилятор</li><li>Бритьё — можно</li></ul>
+      </div>
+      <div class="prep-item">
+        <span class="prep-when">За 1–2 недели</span>
+        <ul class="prep-rules"><li>Не загорать, не посещать солярий</li><li>Предупредить специалиста о препаратах, повышающих чувствительность к свету</li></ul>
+      </div>
+      <div class="prep-item">
+        <span class="prep-when">За 24 часа</span>
+        <ul class="prep-rules"><li>Побрить зону процедуры</li><li>Не использовать скрабы и кислоты на зоне</li></ul>
+      </div>
+      <div class="prep-item">
+        <span class="prep-when">В день процедуры</span>
+        <ul class="prep-rules"><li>Прийти с чистой кожей</li><li>Не наносить крем, дезодорант, тональный на зону</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="prep-col r">
+    <div class="sec-eyebrow">— После процедуры</div>
+    <h2 class="sec-title">Уход после<br><em>процедуры</em></h2>
+    <div class="prep-timeline">
+      <div class="prep-item">
+        <span class="prep-when">24–48 часов</span>
+        <ul class="prep-rules"><li>Не перегревать кожу</li><li>Не посещать баню, сауну, бассейн</li><li>Без скрабов, кислот, спиртовых средств</li></ul>
+      </div>
+      <div class="prep-item">
+        <span class="prep-when">1–2 недели</span>
+        <ul class="prep-rules"><li>Не загорать</li><li>Защита от солнца на открытых участках</li><li>Не выдёргивать волосы воском или пинцетом</li></ul>
+      </div>
+      <div class="prep-item">
+        <span class="prep-when">Важно знать</span>
+        <ul class="prep-rules"><li>Обработанные волосы выпадают постепенно — в течение нескольких дней и недель. Это норма.</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq">
+  <div class="faq-side r">
+    <div>
+      <div class="sec-eyebrow">— Вопросы</div>
+      <h2 class="sec-title">Часто<br>спрашивают</h2>
+      <p class="faq-side-text">Отвечаем честно, без маркетинга. Если вопрос не нашли — звоните или пишите.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <a class="btn-gold" href="tel:+79250293925"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> Позвонить</a>
+      <button class="btn-outline" onclick="openMessPopup()" style="cursor:pointer"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg> Написать</button>
+    </div>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q">Чем александрит отличается от диодного лазера? <span class="faq-icon">+</span></button>
+      <div class="faq-a"><p class="faq-a-in">Александрит работает на 755 нм и хорошо взаимодействует с меланином волоса — часто даёт быстрый визуальный эффект на светлой коже с тёмными волосами. Диодный лазер работает глубже (~810 нм) и предпочтителен для смуглой или загорелой кожи. Итоговый выбор делает специалист после осмотра.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Почему александрит дороже? <span class="faq-icon">+</span></button>
+      <div class="faq-a"><p class="faq-a-in">В аппарате используется кристалл александрита — это более дорогой класс оборудования. Плюс процедура часто проходит быстрее и даёт выраженный визуальный эффект на подходящем фототипе уже в начале курса.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Сколько процедур нужно? <span class="faq-icon">+</span></button>
+      <div class="faq-a"><p class="faq-a-in">Обычно 6–8 сеансов для александрита и 7–10 для диода. Точное количество зависит от зоны, цвета волос, фототипа и гормонального фона. Планируем курс индивидуально.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Это навсегда? <span class="faq-icon">+</span></button>
+      <div class="faq-a"><p class="faq-a-in">Корректная формулировка — долговременное снижение роста волос. После курса волос становится меньше, он растёт медленнее и тоньше. Со временем могут понадобиться поддерживающие процедуры — значительно реже, чем обычная депиляция.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Больно ли делать лазерную эпиляцию? <span class="faq-icon">+</span></button>
+      <div class="faq-a"><p class="faq-a-in">Ощущения индивидуальны. Чаще это тепло, покалывание или короткий щелчок. Система охлаждения делает процедуру комфортнее. Перед стартом проводим пробную вспышку.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Подходит ли александрит для светлых волос? <span class="faq-icon">+</span></button>
+      <div class="faq-a"><p class="faq-a-in">Для результата нужен меланин в волосе. Русые и тонкие волосы часто поддаются обработке. Белые, седые и рыжие волосы содержат мало нужного пигмента — результат будет хуже. На консультации специалист оценит ожидания честно.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Можно ли делать летом, с загаром? <span class="faq-icon">+</span></button>
+      <div class="faq-a"><p class="faq-a-in">Можно, если кожа без свежего загара. При загаре чаще предлагаем перенос процедуры или диодный лазер. После процедуры обязательна защита от солнца.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Можно ли бриться между процедурами? <span class="faq-icon">+</span></button>
+      <div class="faq-a"><p class="faq-a-in">Да, бритьё разрешено. Нельзя удалять волосы с корнем: воском, шугарингом, пинцетом или эпилятором — это снижает эффективность курса.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REVIEWS ═══ -->
+<section id="reviews">
+  <div class="r">
+    <div class="sec-eyebrow">— Клиенты</div>
+    <h2 class="sec-title" style="margin-top:12px">Гладкая кожа — повод прийти.<br><em>Видимый результат — причина вернуться.</em></h2>
+    <p style="font-size:16px;color:#111111;max-width:620px;margin-top:16px;line-height:1.85;font-weight:400">Мы не просто обещаем гладкость, а гарантируем видимый эффект. Перед первой процедурой подробно разбираем весь процесс: какие ощущения нормальны, как ухаживать за кожей и когда ждать первых результатов, чтобы всё прошло максимально комфортно и предсказуемо.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="rev-card r">
+      <span class="rev-mark">"</span>
+      <p class="rev-text">Долго выбирала между диодом и александритом — специалист всё объяснила честно. Выбрали александрит. После трёх сеансов ноги стали заметно чище.</p>
+      <div class="rev-name">Анастасия В.</div>
+      <div class="rev-zone">Александрит · Ноги</div>
+    </div>
+    <div class="rev-card r d1">
+      <span class="rev-mark">"</span>
+      <p class="rev-text">Была загорелая — перенесли сеанс, предложили диодный. Оценила, что не впихнули процедуру ради денег. Теперь хожу постоянно.</p>
+      <div class="rev-name">Мария Д.</div>
+      <div class="rev-zone">Диодный · Бикини + подмышки</div>
+    </div>
+    <div class="rev-card r d2">
+      <span class="rev-mark">"</span>
+      <p class="rev-text">Первый раз на александрите. До этого был только диод в другой студии. Разница ощутимая — эффект виден быстрее, кожа после чище.</p>
+      <div class="rev-name">Екатерина С.</div>
+      <div class="rev-zone">Александрит · Лицо</div>
+    </div>
+    <div class="rev-card r">
+      <div class="rev-quote">"</div>
+      <p class="rev-text">Хожу уже третий курс. Первые два на диоде — в другом месте. Пришла сюда попробовать александрит. Скорость результата совсем другая. Студия чистая, специалист объяснила всё без воды.</p>
+      <div class="rev-name">Ольга М.</div>
+      <div class="rev-zone">Александрит · Ноги + бикини</div>
+    </div>
+  </div>
+  <div class="rev-src r">
+    <a class="src-btn" href="https://yandex.ru/maps/org/dr_laser/174870443301/?ll=37.538540%2C55.778391&utm_source=share&z=16.8" target="_blank">Яндекс.Карты →</a>
+    <a class="src-btn" href="https://go.2gis.com/3q5BG" target="_blank">2ГИС →</a>
+    <a class="btn-gold" href="tel:+79250293925"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> Позвонить</a>
+    <button class="btn-outline" onclick="openMessPopup()" style="cursor:pointer"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg> Написать</button>
+  </div>
+</section>
+
+<!-- ═══ CONTRAINDICATIONS ═══ -->
+<section id="contra">
+  <div class="contra-inner r">
+    <div class="contra-left">
+      <div class="sec-eyebrow">— Важно знать</div>
+      <h2 class="sec-title">Противо&shy;показания</h2>
+      <p style="font-size:13px;color:#111111;line-height:1.85;margin-top:14px">Лазерная эпиляция — медицинская косметологическая процедура. Перед первым визитом важна консультация. Если сомневаетесь — позвоните, расскажем подробнее.</p>
+    </div>
+    <div class="contra-list">
+      <span class="ctag">Беременность и лактация</span>
+      <span class="ctag">Онкологические заболевания</span>
+      <span class="ctag">Декомпенсированный диабет</span>
+      <span class="ctag">Эпилепсия</span>
+      <span class="ctag">Активные кожные заболевания</span>
+      <span class="ctag">Герпес, воспаления, ожоги</span>
+      <span class="ctag">Свежий загар / автозагар</span>
+      <span class="ctag">Фотосенсибилизирующие препараты</span>
+      <span class="ctag">Системные ретиноиды</span>
+      <span class="ctag">Возраст до 18 лет</span>
+      <span class="ctag">Татуировки в зоне обработки</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER CTA ═══ -->
+<section id="footer-cta">
+  <div class="fcta-left r">
+    <div class="fcta-eye">✦ Хотите понять, подойдёт ли вам александрит?</div>
+    <h2 class="fcta-title">Запишитесь<br>на бесплатную<br><em>консультацию</em></h2>
+    <p class="fcta-text">Специалист определит ваш фототип кожи, учтёт свежий загар и подскажет, какой лазер сработает лучше — александрит или диод.</p>
+    <p class="fcta-text" style="margin-top:8px;color:#ffffff;font-size:15px">Всё расскажем, подскажем, а решение вы примете сами.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+      <a class="btn-gold-inv" href="tel:+79250293925"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> Позвонить</a>
+      <button class="btn-ghost" onclick="openMessPopup()" style="cursor:pointer;border:none;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.3)"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg> Написать</button>
+    </div>
+  </div>
+  <form class="fcta-right r d1" id="leadForm" onsubmit="openTelegramLead(event)">
+    <div class="form-row">
+      <input class="form-input" type="text" name="name" placeholder="Ваше имя" autocomplete="name" required>
+      <input class="form-input" type="tel" name="phone" placeholder="+7 925 029-39-25" autocomplete="tel" required>
+    </div>
+    <select class="form-input" name="zone" style="cursor:pointer;color:#ffffff;background:rgba(255,255,255,0.06)">
+      <option value="" disabled selected style="color:#111111">Интересующая зона (не обязательно)</option>
+      <option style="color:#111">Подмышки</option>
+      <option style="color:#111">Бикини</option>
+      <option style="color:#111">Ноги</option>
+      <option style="color:#111">Руки</option>
+      <option style="color:#111">Лицо</option>
+      <option style="color:#111">Всё тело</option>
+    </select>
+    <button class="form-submit" type="submit">Открыть Telegram с заявкой →</button>
+    <p class="form-legal">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Имеются противопоказания, необходима консультация специалиста.</p>
+  </form>
+</section>
+
+
+<!-- ═══ MEDICAL DISCLAIMER ═══ -->
+<section id="disclaimer">
+  <div class="disclaimer-icon-wrap">
+    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+  </div>
+  <div class="disclaimer-content">
+    <p class="disclaimer-text">
+      <strong>Имеются противопоказания. Необходима консультация специалиста.</strong>
+      Лазерная эпиляция является медицинской косметологической процедурой и выполняется исключительно на основании медицинской лицензии специалистами с профильным образованием.
+      Перед первым посещением и началом курса процедур обязательна консультация специалиста для исключения противопоказаний, оценки фототипа кожи, состояния здоровья и индивидуальных особенностей.
+      Результат процедур индивидуален и зависит от фототипа кожи, цвета и структуры волос, гормонального фона и соблюдения рекомендаций специалиста.
+      Корректная формулировка результата: долговременное снижение роста волос — не «удаление навсегда».
+      Студия не несёт ответственности за результаты, полученные при несоблюдении рекомендаций специалиста или наличии скрытых противопоказаний, не указанных клиентом на консультации.
+      Все материалы сайта носят информационный характер и не являются публичной офертой.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo">Dr.Laser<span>.</span></div>
+  <div class="f-note">Москва · ул. Маргелова, 3, корп. 3</div>
+  <div class="f-note">© 2025 · ООО «Доктор Лазер» · ОГРН 1247700402795 · <a href="#">Политика конфиденциальности</a></div>
+</footer>
+
+<script>
+
+const TELEGRAM_USERNAME = 'username';
+document.querySelectorAll('a[href="https://t.me/username"]').forEach(link => {
+  link.href = `https://t.me/${TELEGRAM_USERNAME}`;
+});
+
+// DOCUMENT MODAL
+function openPdf(src, title) {
+  document.getElementById('pdfModalTitle').textContent = title;
+  document.getElementById('pdfModalFrame').src = src;
+  document.getElementById('pdfModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePdfModal() {
+  document.getElementById('pdfModal').classList.remove('open');
+  document.getElementById('pdfModalFrame').src = '';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closePdfModal(); });
+
+function openTelegramLead(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  if (!form.reportValidity()) return;
+
+  const name = form.elements.name.value.trim();
+  const phone = form.elements.phone.value.trim();
+  const zone = form.elements.zone.value;
+  const message = [
+    'Заявка Dr.Laser',
+    `Имя: ${name}`,
+    `Телефон: ${phone}`,
+    zone ? `Зона: ${zone}` : 'Зона: не указана',
+    'Хочу подобрать лазер и записаться на консультацию.'
+  ].join('\n');
+
+  const text = encodeURIComponent(message);
+  window.location.href = `tg://resolve?domain=${TELEGRAM_USERNAME}&text=${text}`;
+}
+
+
+// GALLERY SLIDER
+(function(){
+  const track = document.getElementById('sliderTrack');
+  const dotsWrap = document.getElementById('sliderDots');
+  if(!track) return;
+
+  const slides = track.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+  let autoTimer;
+
+  function getVisible(){ return 1; }
+
+  function maxIndex(){ return Math.max(0, total - getVisible()); }
+
+  // Build dots
+  function buildDots(){
+    dotsWrap.innerHTML = '';
+    const steps = maxIndex() + 1;
+    for(let i=0;i<steps;i++){
+      const d = document.createElement('div');
+      d.className = 'slider-dot' + (i===current?' active':'');
+      d.onclick = ()=>{ goTo(i); resetAuto(); };
+      dotsWrap.appendChild(d);
+    }
+  }
+
+  function updateDots(){
+    dotsWrap.querySelectorAll('.slider-dot').forEach((d,i)=>{
+      d.classList.toggle('active', i===current);
+    });
+  }
+
+  function goTo(idx){
+    current = Math.max(0, Math.min(idx, maxIndex()));
+    const pct = (100/getVisible()) * current;
+    track.style.transform = `translateX(-${pct}%)`;
+    updateDots();
+  }
+
+  function next(){ goTo(current >= maxIndex() ? 0 : current+1); }
+  function prev(){ goTo(current <= 0 ? maxIndex() : current-1); }
+
+  document.getElementById('sliderNext').onclick = ()=>{ next(); resetAuto(); };
+  document.getElementById('sliderPrev').onclick = ()=>{ prev(); resetAuto(); };
+
+  function startAuto(){ autoTimer = setInterval(next, 3500); }
+  function resetAuto(){ clearInterval(autoTimer); startAuto(); }
+
+  // Touch support
+  let touchX = 0;
+  track.addEventListener('touchstart', e=>{ touchX = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', e=>{
+    const dx = e.changedTouches[0].clientX - touchX;
+    if(Math.abs(dx)>40){ dx<0?next():prev(); resetAuto(); }
+  }, {passive:true});
+
+  window.addEventListener('resize', ()=>{ buildDots(); goTo(Math.min(current,maxIndex())); });
+
+  buildDots();
+  startAuto();
+})();
+
+
+// Equalize device header heights
+function equalizeDeviceHeaders() {
+  const ah = document.querySelector('.device-col-header-alex');
+  const dh = document.querySelector('.device-col-header-diod');
+  if (!ah || !dh) return;
+  // Reset first
+  ah.style.height = '';
+  dh.style.height = '';
+  const maxH = Math.max(ah.offsetHeight, dh.offsetHeight);
+  ah.style.height = maxH + 'px';
+  dh.style.height = maxH + 'px';
+}
+window.addEventListener('load', equalizeDeviceHeaders);
+window.addEventListener('resize', equalizeDeviceHeaders);
+
+// PRICE TABS
+function switchP(el,id){
+  document.querySelectorAll('.ptab').forEach(t=>t.classList.remove('on'));
+  document.querySelectorAll('.ppanel').forEach(p=>p.classList.remove('on'));
+  el.classList.add('on');
+  document.getElementById('p'+id).classList.add('on');
+}
+// ACCORDION
+function toggleAcc(head){
+  const g=head.parentElement;
+  g.classList.toggle('acc-open');
+}
+// Init open state
+document.querySelectorAll('.acc-open .acc-body').forEach(b=>{
+  b.style.maxHeight='none';
+});
+// FAQ
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement;
+    const was=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!was)item.classList.add('open');
+  });
+});
+// MESSENGER POPUP
+function openMessPopup(){ document.getElementById('messPopup').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeMessPopup(){ document.getElementById('messPopup').classList.remove('open'); document.body.style.overflow=''; }
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeMessPopup(); });
+
+// REVEAL - fallback for file:// protocol
+document.querySelectorAll(".r").forEach(el=>el.classList.add("v"));
+
+// Hide float bar when footer-cta is in view
+const footerCta = document.getElementById('footer-cta');
+const floatBar = document.getElementById('floatBar');
+if(footerCta && floatBar){
+  const fbObs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      const isMobile = window.innerWidth < 768;
+      if(e.isIntersecting){
+        floatBar.style.transform = isMobile ? 'translateY(100%)' : 'translateX(-50%) translateY(100%)';
+        floatBar.style.opacity = '0';
+      } else {
+        floatBar.style.transform = isMobile ? 'translateY(0)' : 'translateX(-50%)';
+        floatBar.style.opacity = '1';
+      }
+    });
+  },{threshold:0.15});
+  fbObs.observe(footerCta);
+  const footerEl = document.querySelector('footer');
+  if(footerEl) fbObs.observe(footerEl);
+}
+try{
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v')});
+  },{threshold:0.05});
+  document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+}catch(e){}
+</script>
+
+<!-- PDF MODAL -->
+<div class="pdf-modal" id="pdfModal">
+  <div class="pdf-modal-overlay" onclick="closePdfModal()"></div>
+  <div class="pdf-modal-box">
+    <div class="pdf-modal-head">
+      <div class="pdf-modal-title" id="pdfModalTitle">Документ</div>
+      <div class="pdf-modal-actions">
+        <button class="pdf-modal-close" onclick="closePdfModal()">
+          <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </div>
+    </div>
+    <img class="pdf-modal-frame" id="pdfModalFrame" src="" alt="Документ">
+  </div>
+</div>
+
+</div><!-- /page-wrap -->
+</body>
+</html>

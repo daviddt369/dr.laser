@@ -685,7 +685,21 @@ footer{padding:20px 16px 80px;flex-direction:column;align-items:flex-start;gap:8
 .float-btn.write{background:#c4a068;color:#ffffff}
 .float-btn svg{width:18px;height:18px;fill:#ffffff;flex-shrink:0}
 
+.yclients-float{
+  position:fixed;left:16px;bottom:78px;z-index:520;
+  width:52px;height:52px;
+  display:flex;align-items:center;justify-content:center;
+  background:#0e0e0e;
+  border-radius:50%;
+  box-shadow:0 8px 24px rgba(0,0,0,0.35);
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+.yclients-float:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,0.45)}
+.yclients-float svg{width:26px;height:28px;display:block}
+
 @media(min-width:768px){
+  .yclients-float{bottom:24px}
+
   .float-bar{max-width:480px;left:50%;transform:translateX(-50%);border-radius:0;overflow:visible}
   .mess-popup-box{border-radius:16px;margin-bottom:80px}
 }
@@ -1824,6 +1838,14 @@ nav,.ticker-wrap,.disclaimer-bar,.hero-cta-strip,.hstat,.strip-link,.license-bad
   </button>
 </div>
 
+<a class="yclients-float" href="https://n1157810.yclients.com/company/1065079/personal/menu?o=" target="_blank" rel="noopener" aria-label="Онлайн-запись через YCLIENTS">
+  <svg viewBox="0 0 34 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M27.2792 1.17358L6.08894 1.17358C5.27826 1.17739 4.47499 1.328 3.71799 1.61814C2.96815 1.88243 2.30291 2.34298 1.7916 2.9518C1.21723 3.49361 0.762895 4.14987 0.45794 4.87819C0.154683 5.63141 0.00359302 6.43723 0.0133869 7.24914L0.0133871 28.5877C0.0171884 29.3984 0.167804 30.2016 0.45794 30.9587C0.722234 31.7084 1.18278 32.3737 1.7916 32.885C2.33341 33.4594 2.98967 33.9137 3.71799 34.2186C4.47122 34.5219 5.27703 34.6731 6.08894 34.6632L27.4275 34.6632C28.2382 34.6594 29.0414 34.5088 29.7985 34.2186C30.5482 33.9543 31.2135 33.4938 31.7248 32.885C32.2992 32.3433 32.7535 31.687 33.0584 30.9587C33.3617 30.2054 33.5129 29.3996 33.503 28.5877L33.503 7.24914C33.4992 6.43846 33.3486 5.63518 33.0584 4.87819C32.7941 4.12835 32.3336 3.46312 31.7248 2.9518C31.1831 2.37743 30.5268 1.92309 29.7985 1.61814C28.9902 1.32732 28.1382 1.17697 27.2792 1.17358Z" fill="#FFCB00"/>
+    <path d="M11 9.5L17 18.5L11 27" stroke="#0a0a0c" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M22.5 9.5L17 18.5" stroke="#0a0a0c" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  </svg>
+</a>
+
 
 <!-- NAV -->
 <nav>
@@ -1839,7 +1861,7 @@ nav,.ticker-wrap,.disclaimer-bar,.hero-cta-strip,.hstat,.strip-link,.license-bad
   </ul>
   <div class="nav-right">
     <a class="nav-phone" href="tel:+79250293925">+7 925 029-39-25</a>
-    <a class="nav-cta" href="#footer-cta">Записаться</a>
+    <a class="nav-cta" href="https://n1157810.yclients.com/company/1065079/personal/menu?o=" target="_blank" rel="noopener">Записаться</a>
   </div>
 </div>
 </nav>
@@ -2184,7 +2206,7 @@ nav,.ticker-wrap,.disclaimer-bar,.hero-cta-strip,.hstat,.strip-link,.license-bad
 
     <div class="price-club-row">
       <div class="price-club-label">Клубная карта - скидка на весь курс</div>
-      <div class="price-club-vals"><span><b>1 500 ₽</b><small>6 месяцев</small></span><span><b>2 500 ₽</b><small>12 месяцев</small></span></div>
+      <div class="price-club-vals"><span><b>1 990 ₽</b><small>6 месяцев</small></span><span><b>2 500 ₽</b><small>12 месяцев</small></span></div>
     </div>
   </div>
 
@@ -2238,7 +2260,7 @@ nav,.ticker-wrap,.disclaimer-bar,.hero-cta-strip,.hstat,.strip-link,.license-bad
       <div class="complex-card r" style="grid-column:1/-1;text-align:center;display:flex;flex-direction:column;align-items:center">
         <div class="complex-tag">Ультра</div>
         <div class="complex-name">Экстра комплекс</div>
-        <p class="complex-zones">Подмышечные впадины + глубокое бикини + ноги полностью + руки полностью</p>
+        <p class="complex-zones">Подмышечные впадины + глубокое бикини + межъягодичная впадина + ноги полностью + руки полностью</p>
         <div class="complex-price">14 762 ₽</div>
         <div class="complex-sub-prices">
           <span>По карте - 11 850</span>
@@ -2255,7 +2277,7 @@ nav,.ticker-wrap,.disclaimer-bar,.hero-cta-strip,.hstat,.strip-link,.license-bad
     <div class="price-bottom-label">Клубная карта - скидка на весь курс*</div>
     <div class="price-bottom-vals">
       <div class="price-bottom-val">
-        <span class="price-bottom-price">1 500 ₽</span>
+        <span class="price-bottom-price">1 990 ₽</span>
         <span class="price-bottom-period">6 месяцев</span>
       </div>
       <div class="price-bottom-sep"></div>

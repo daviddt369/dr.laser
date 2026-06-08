@@ -716,6 +716,7 @@ footer{padding:20px 16px 80px;flex-direction:column;align-items:flex-start;gap:8
   font-family:'Tenor Sans',sans-serif;
   font-size:12px;letter-spacing:0.06em;
   color:#0a0a0c;
+  text-decoration:none;
   background:#f2ede6;
   border:1px solid var(--gold);
   padding:9px 16px;
@@ -723,10 +724,11 @@ footer{padding:20px 16px 80px;flex-direction:column;align-items:flex-start;gap:8
   white-space:nowrap;
   box-shadow:0 8px 20px rgba(0,0,0,0.25);
   opacity:0;transform:translateY(-50%) translateX(-10px);
-  transition:opacity .6s ease, transform .6s ease;
+  transition:opacity .6s ease, transform .6s ease, background .2s ease, color .2s ease;
   pointer-events:none;
 }
-.yclients-wrap.show .yclients-tip{opacity:1;transform:translateY(-50%)}
+.yclients-tip:hover{background:var(--gold);color:#0a0a0c}
+.yclients-wrap.show .yclients-tip{opacity:1;transform:translateY(-50%);pointer-events:auto}
 
 @media(min-width:768px){
   .yclients-float{bottom:24px}
@@ -1870,7 +1872,7 @@ nav,.ticker-wrap,.disclaimer-bar,.hero-cta-strip,.hstat,.strip-link,.license-bad
 </div>
 
 <div class="yclients-wrap" id="yclientsWrap">
-  <span class="yclients-tip">Записаться онлайн</span>
+  <a class="yclients-tip" href="https://n1157810.yclients.com/company/1065079/personal/menu?o=" target="_blank" rel="noopener">Записаться онлайн</a>
   <a class="yclients-float" href="https://n1157810.yclients.com/company/1065079/personal/menu?o=" target="_blank" rel="noopener" aria-label="Онлайн-запись через YCLIENTS">
     <svg viewBox="0 0 34 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M27.2792 1.17358L6.08894 1.17358C5.27826 1.17739 4.47499 1.328 3.71799 1.61814C2.96815 1.88243 2.30291 2.34298 1.7916 2.9518C1.21723 3.49361 0.762895 4.14987 0.45794 4.87819C0.154683 5.63141 0.00359302 6.43723 0.0133869 7.24914L0.0133871 28.5877C0.0171884 29.3984 0.167804 30.2016 0.45794 30.9587C0.722234 31.7084 1.18278 32.3737 1.7916 32.885C2.33341 33.4594 2.98967 33.9137 3.71799 34.2186C4.47122 34.5219 5.27703 34.6731 6.08894 34.6632L27.4275 34.6632C28.2382 34.6594 29.0414 34.5088 29.7985 34.2186C30.5482 33.9543 31.2135 33.4938 31.7248 32.885C32.2992 32.3433 32.7535 31.687 33.0584 30.9587C33.3617 30.2054 33.5129 29.3996 33.503 28.5877L33.503 7.24914C33.4992 6.43846 33.3486 5.63518 33.0584 4.87819C32.7941 4.12835 32.3336 3.46312 31.7248 2.9518C31.1831 2.37743 30.5268 1.92309 29.7985 1.61814C28.9902 1.32732 28.1382 1.17697 27.2792 1.17358Z" fill="#FFCB00"/>
@@ -2917,7 +2919,11 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeMessPopup(); 
 // YCLIENTS floating widget tooltip
 setTimeout(()=>{
   const wrap=document.getElementById('yclientsWrap');
-  if(wrap) wrap.classList.add('show');
+  if(!wrap) return;
+  wrap.classList.add('show');
+  const tip=wrap.querySelector('.yclients-tip');
+  const hideTimer=setTimeout(()=>wrap.classList.remove('show'),5000);
+  if(tip) tip.addEventListener('click',()=>clearTimeout(hideTimer),{once:true});
 },8000);
 
 // REVEAL on scroll
